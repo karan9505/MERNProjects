@@ -1,0 +1,281 @@
+#AddRestaurantL,#Login,#Signup
+{
+    color: rgb(255, 255, 255,0.9);
+    position: absolute;
+    top:26px;
+    text-decoration: none;
+    left: 887px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 100;
+    
+}
+#Login
+{
+    left: 1050px;
+}
+#Signup
+{
+    left: 1140px;
+
+}
+#BackImage
+{
+    position: absolute;
+    z-index: -1;
+    top:0px;
+    width: 100%;
+}
+#ZomatoTitle
+{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    position: absolute;
+    top:217px;
+    left:504px;
+}
+#ZomatoText
+{
+    height: 71px;
+    position: absolute;
+    left:100px;
+}
+
+#Line1,#Line2
+{
+    font-size: 37px;
+    letter-spacing: 1px;
+}
+#Line1
+{
+    position: absolute;
+    left:-20px;
+    top:60px;
+    width: max-content;
+}
+#Line2
+{
+    position: absolute;
+    top:103px;
+    left: 115px;
+    width: max-content;
+}
+#India1
+{
+    display: flex;
+    position: absolute;
+    top:575px;
+    left:515px;
+    width: max-content;
+}
+#Flag
+{
+    height: 35px;
+    border-radius: 7px;
+    margin: 10px;
+    position: absolute;
+    top:27px;
+    left: 340px;
+}
+
+#Line3,#Line4
+{
+    font-size: 36px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+#Line3
+{
+    color: rgb(0, 0, 0,0.8);
+}
+#Line4
+{
+    position: absolute;
+    left: 410px;
+}
+#About
+{
+    display: flex;
+    text-align: center;
+    position: absolute;
+    top:677px;
+    font-size: 20px;
+    left: 310px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    color: rgb(0, 0, 0,0.6);
+    font-weight: 100;
+}
+#cities
+{
+    width: 72%;
+    position: absolute;
+    left: 14%;
+    top:850px;
+}
+#Allcountry
+{
+    position: absolute;
+    top:3850px;
+    left: 14%;
+    font-size: 35px;
+}
+#countries
+{
+    width: 72%;
+    position: absolute;
+    left: 14%;
+    top:3950px;
+}
+#Footer
+{
+    position: absolute;
+    background-color: rgb(248, 248, 248);
+    top:4785px;
+    height: 457px;
+    width: 1529px;
+}
+#Footer1,#Footer11,#Footer12
+{
+    display: flex;
+}
+#Footer11,#Footer12
+{
+    border: 1px solid rgb(0, 0, 0,0.5);
+    color: rgb(0, 0, 0,0.7);;
+    border-radius: 8px;
+    padding: 10px;
+    height: 15px;
+    width: 100px;
+    position: absolute;
+    right: 0px;
+    top:19px;
+
+}
+#Footer11
+{
+    right: 140px;
+    width: 90px;
+}
+#Zblack
+{
+    position: absolute;
+    height: 45px;
+    left: -10px;
+    top:12px;
+}
+#Downarr1,#Downarr2
+{
+    height: 10px;
+    position: absolute;
+    right: 10px;
+    top:12px;
+}
+
+#web
+{
+    height: 20px;
+    position: absolute;
+    top:7px;
+    left:5px;
+}
+#FFlag
+{
+    height: 15px;
+
+}
+#Footer1
+{
+    position: absolute;
+    width: 72%;
+    left: 14%;
+    top:30px;
+}
+#Line5,#Line6
+{
+    position: absolute;
+    top:-10px;
+    right:30px;
+    font-size: 18px;
+}
+#Line5
+{
+    right: 30px;
+}
+#Footer2
+{
+    display: flex;
+    position: absolute;
+    width: 73%;
+    left: 14%;
+    top:110px;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(0, 0, 0,0.3);
+    height: 260px;
+    justify-content: space-between;
+}
+#Head1,#Head2,#Head3,#Head4,#Head5,#Head6
+{
+    letter-spacing: 1px;
+}
+#Line7,#Line8,#Line9,#Line10,#Line11
+{
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0,0.5) ;
+    line-height: 26px;
+    position: relative;
+    bottom: 5px;
+    font-size: 15px;
+}
+#zomaverse
+{
+    position: absolute;
+    left:200px;
+}
+#resenp
+{
+    position: absolute;
+    left:400px;
+}
+#learnmore
+{
+    position: absolute;
+    left:700px;
+}
+#social
+{
+    position: absolute;
+    left:900px;
+}
+
+#socialimg
+{
+    position: relative;
+    right: 7px;
+}
+.simg
+{
+    height: 22px;
+    margin-left: 7px;
+}
+#store1,#store2
+{
+    height: 40px;
+    position: absolute;
+    top:90px;
+}
+#store2
+{
+    top:140px;
+}
+#lastline
+{
+    position: absolute;
+    top:380px;
+    left: 14%;
+    font-size: 14px;
+    color: rgb(0, 0, 0,0.5);
+}

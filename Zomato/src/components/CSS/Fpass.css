@@ -1,0 +1,142 @@
+#fpback
+{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+}
+#fpwindow
+{
+    position: absolute;
+    top:120px;
+    left:535px;
+    height: 470px;
+    width: 450px;
+    background-color: white;
+    border-radius: 5px;
+    color: rgba(0,0,0,0.8);
+}
+#fpw1
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 400px;
+    left: 22px;
+    justify-content: space-between;
+    top:-10px;
+}
+#fphead
+{
+    font-size: 30px;
+}
+#fpphonenum
+{
+    position: absolute;
+    top:80px;
+    width: 285px;
+    left:137px;
+    outline: none;
+    height: 42px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border:1px solid rgba(0,0,0,0.2);
+    border-left: none;
+    font-size: 20px;
+    color: rgba(0,0,0,0.7);
+}
+#bsecque,#bsecans,#brpass
+{
+    position: absolute;
+    top:180px;
+    left:22px;
+    width: 384px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    height: 42px;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#bsecans
+{
+    top:250px;
+}
+#brpass
+{
+    top:320px;
+}
+#fpx
+{
+    height: 20px;
+    width: 25px;
+    position: relative;
+    left: 10px;
+}
+#rsq
+{
+    position: absolute;
+    top:400px;
+    width: 405px;
+    left: 22px;
+    outline: none;
+    height: 46px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgba(220,53,70,0.9);
+    color: white;
+    font-size: 17px;
+}
+#rsq:hover
+{
+    background-color: rgba(239,79,95,1);
+    cursor: pointer;
+}
+#fpselec
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top:80px;
+    height: 44px;
+    border: 1px solid rgba(0,0,0,0.2);
+    left: 22px;
+    width: 114px;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#fpfalse1,#fpfalse2,#fpfalse3
+{
+    position: absolute;
+    color: rgba(215,65,85);
+    top:114px;
+    left:23px;
+    font-size: 12px;
+    font-weight: 0;
+}
+#fpfalse2
+{
+    top:285px;
+}
+#fpfalse3
+{
+    top:355px;
+}
+#gq
+{
+    position: absolute;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgba(220,53,70,0.9);
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    top:137px;
+    left:165px;
+}

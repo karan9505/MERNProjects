@@ -1,0 +1,192 @@
+.showbus{
+  margin-top: 64px;
+  background: transparent;
+  height: 700px;
+  padding-top: 30px;
+  overflow-x: hidden;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.showbus_container{
+    
+    width: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.buslist1{
+    margin-left: 8%;
+    display: flex;
+    flex-direction: column;
+    border-color: #0000007d;
+    border: 43px;
+    border-width: 10px;
+    border: 1px solid;
+    border: 1.8px solid rgb(221, 221, 221);
+}
+.buslist1:hover{
+    box-shadow: 0px 9px 20px 0px;
+    transition: 300ms ease;
+   
+}
+.bus_info_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.bus_img{
+    display: flex;
+    width: 145px;
+    margin-left: 30px;
+    height: 150px;
+    background-color: blueviolet;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.bus_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.bus_info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    text-align: left;
+}
+.bus_info h1{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.bus_info h3{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.bus_info p{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.search_bus{
+    text-align: start;
+    margin-left: 52px;
+    margin-bottom: 10px;
+}
+.search_bus input{
+    width: 260px;
+    height: 35px;
+}
+.bus_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buseswiper{
+    width: 1292px;
+    background: #d61cd6; 
+}
+.swiper{
+    overflow: hidden;
+}
+.bus_information{
+    width: 375px;
+    height: 290px;
+}
+.swiper-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.bus{
+    background-image: linear-gradient(#7300fc, black);
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .bus_info_part{
+    height: 175px;
+  }
+  .bus_part1{
+    width: 362px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .bus_part2{
+    margin-left: 7%;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .bus_part3{
+    
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .bus_part4{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  
+  .bus_part6{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+ 
+  .bus_part8{
+    width: 103px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    cursor: pointer;
+  }
+  .bus_part8 button{
+    margin-left: 0;
+    background-color: #d84e55;
+    border: none;
+    width: 90px;
+    color: white;
+    height: 33px;
+    margin-bottom: 35px;
+  }
+  #edit{
+    margin-top: 20px;
+  }
+  #delet{
+    margin-top: 20px;
+    margin-bottom: 17px;
+  }

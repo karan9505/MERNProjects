@@ -1,0 +1,45 @@
+.box{
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 30%;
+    width: 40%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#addbus{
+    margin-top: 73px;
+    margin-left: 30px;
+    min-width: 1330px;
+
+}
+input {
+    height: 25px;
+    margin-left: 20%;
+    width: 60%;
+}
+#bustype, #busType, #seat, #bus-select, #route-select{
+    height: 25px;
+    margin-left: 20%;
+    width: 60%;
+}
+.box p{
+   text-align: left;
+    margin-left: 20%;
+}
+#add{
+    width: 61%;
+    color: white;
+    background-color: #d84e55;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+#bus{
+    color: #d84e55;
+}
+.box1 input{
+    height: 25px;
+    margin-left: 20%;
+    width: 60%;
+}

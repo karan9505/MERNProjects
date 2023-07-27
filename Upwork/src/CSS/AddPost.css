@@ -1,0 +1,243 @@
+#AddPostBoard
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0px;
+    left:0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+#PostDta
+{
+    position: absolute;
+    background-color: white;
+    height: 92%;
+    width: 80%;
+    top:4%;
+    left: 10%;
+    border-radius: 20px;
+}
+#AddPostHeading
+{
+    position: absolute;
+    width: 18%;
+    left: 41%;
+    top:-2%;
+    z-index: 2;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+}
+#PostJobButton
+{
+    position: absolute;
+    height: 30px;
+    right: 45%;
+    outline: none;
+    border: none;
+    background-color: rgba(13,138,0,0.8);
+    color:white;
+    width: 10%;
+    border-radius: 20px;
+    font-size: 15px;
+    top:645px;
+}
+#PostJobButton:hover
+{
+    background-color: rgba(13,138,0,1);
+    cursor: pointer;
+}
+.PostDiv
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    left: 6%;
+    top:80px;
+    padding: 5px;
+}
+.PostDiv>label
+{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.PostDiv>input
+{
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-size: 15px;
+    width: 99%;
+    border-radius: 2px;
+}
+#jobDescriptiondiv
+{
+    top:180px;
+}
+#jobDescriptiondiv>textarea
+{
+    resize: none;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-size: 15px;
+    width: 99%;
+    border-radius: 2px;
+    height: 200px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+textarea::-webkit-scrollbar
+{
+    width: 10px;
+}
+textarea::-webkit-scrollbar-track
+{
+    background-color: white;
+}
+textarea::-webkit-scrollbar-thumb
+{
+    background-color: rgba(13,138,0,0.4);
+    border-radius: 10px;
+    height: 50px;
+}
+#jobSkillsdiv
+{
+    top:460px;
+    width: 30%;
+}
+#jobCategorydiv
+{
+    top:550px;
+    width: 30%;
+}
+#jobCategorydiv>select
+{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+#jobCategorydiv>select>option
+{
+    height: 10px;
+}
+#jobTermdiv
+{
+    top:550px;
+    left: 510px;
+    width: 16%;
+    height: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#Radiomaindiv
+{
+    display: flex;
+    justify-content: space-between;
+}
+#jobBudgetdiv
+{
+    position: absolute;
+    width: 30%;
+    top:550px;
+    left: 780px;
+}
+#jobBudgetdiv>div>input
+{
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-size: 15px;
+    width: 99%;
+    border-radius: 2px;
+}
+#jobBudgetInpdiv
+{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#jobBudgetdiv>div>input
+{
+    width: 140px;
+    padding-right: 30px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+#MaxRupeeSign,#MinRupeeSign
+{
+    position: absolute;
+    height: 25px;
+    opacity: 0.7;
+    top:40px;
+    left: 157px;
+}
+#MaxRupeeSign
+{
+    left:347px;
+}
+#BackImg
+{
+    position: absolute;
+    height: 25px;
+    right: 10px;
+    top:10px;
+}
+#BackImg:hover
+{
+    cursor: pointer;
+}
+.SkillSet
+{
+    overflow-x: scroll;
+    height: 150px;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 374px;
+}
+.SkillSet>div
+{
+    display: flex;
+    background-color: rgba(13,138,0,0.5);
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    height: 20px;
+    padding: 5px;
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 3px;
+    border-radius: 20px;
+    color: white;
+}
+.SkillSet::-webkit-scrollbar
+{
+    width: 5px;
+    height: 0px;
+}
+.SkillSet::-webkit-scrollbar-thumb
+{
+    background-color: rgba(13,138,0,0.4);
+    border-radius: 10px;
+    height: 50px;
+}
+.SkillSet>div>input
+{
+    background-color: rgba(13,138,0,1);
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-radius: 10px;
+    color: white;
+}

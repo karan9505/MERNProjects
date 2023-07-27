@@ -1,0 +1,244 @@
+/* .img{
+    position: absolute;
+}
+.landing{
+    position: relative;
+} */
+.container{
+    padding-top:64px;
+}
+.offer1{
+    position: relative;
+    top: -100px;
+    margin-left: 25%;
+    height: 120px;
+    width: 50%;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+}
+.offer1 img{
+    padding-left: 50px;
+}
+.offer1 h3{
+   margin-left: 100px;
+    margin-top: 0%;
+}
+.arrow{
+    padding-left: 18px;
+    padding-right: 10px;
+}
+.location{
+    margin-left: 34%;
+    width: 36%;
+    background-color: white;
+    height: 40px;
+    position: relative;
+    top: -325px;
+    display: flex;
+    align-items: center;
+}
+#date{
+    padding-left: 0;
+    margin-left: 25px;
+    width: 98px;
+}
+.search_button{
+    font-size: 20px;
+    width: 147px;
+    margin-left: 29px;
+    margin-bottom: 11px;
+    background-color: #f13d46;
+    height: 41px;
+}
+.location img{
+    padding-top: 5px;
+}
+.location input{
+    border: none;
+    outline: none;
+}
+.coupon{
+    margin-top: -3%;
+    display: flex;
+   
+    padding-bottom: 20px;
+}
+.coupon1{
+    margin-left: 24.5%;
+    height: 250px;
+    width: 25%;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 33cm ;
+}
+.coupon2{
+    margin-left: 1%;
+    height: 250px;
+    width: 25%;
+    border: 1px solid black;
+    background-color:white;
+}
+.promise{
+    padding-top: 20px;
+    background-color: #ece6e6;
+    padding-bottom: 20px;
+}
+.box{
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 30%;
+    width: 40%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.benefits{
+    border: 1px solid black;
+    background-color: white;
+    width: 34%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+.box1{  
+    background-color: white;
+    padding-top: 30px;
+      
+}
+.links a{
+    color: black;
+    text-decoration: none;
+}
+.links{
+  
+    display: flex;
+    margin-left: 15%;
+    padding: 7%;
+}
+.Brand_Trust{
+  margin-left: 10%;
+    margin-top:20px;
+}
+.eye_for_travel{
+    margin-left: 10%;
+}
+.countries a{
+    color: black;
+    text-decoration: none;
+}
+.row1{
+    display: flex;
+    width: 75%;
+    margin-left: 12%;
+    margin-top: 70px;
+    
+}
+.colombia{
+    margin-left: 23%;
+    margin-top: 30px;
+}
+.indonesia{
+    margin-top: 20px;
+    margin-left: 23%;
+}
+.row2{
+    display: flex;
+    width: 75%;
+    margin-left: 12%;
+  
+    
+}
+.row1 img{
+    width: 200px;
+ 
+}
+.row2 img{
+    width: 200px;
+ 
+}
+.peru{
+    margin-left: 23%;
+}
+.singapore{
+    margin-top: 20px;
+    margin-left: 23%;
+}
+.row{
+    margin-left: 17%;
+    display: flex;
+}
+.numbers{
+    background-color: white;
+    padding-top: 25px;
+}
+.customers{
+    width: 20%;
+}
+.operators{
+    margin-left: 10%;
+    width: 20%;
+}
+.bus_tickets{
+    margin-left: 10%;
+    width: 20%;
+}
+#box{
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left: 30%;
+    width: 40%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.location_list{
+    width: 350px;
+    position: absolute;
+    top: 380px;
+    margin-left: 34%;
+    z-index: 999;
+    max-height: 160px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+.location_from,.location_to{
+    width: 50%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    visibility: hidden;
+}
+
+.location_list_option{
+    width: 100%;
+    border: 1px solid;
+    margin-bottom: 2px;
+    text-align: left;
+    background-color: #ece6e6;
+    cursor: pointer;
+}
+.location_list_option p{
+    font-size: 13px;
+    margin-left: 4px;
+}
+.location_from::-webkit-scrollbar-track  ,.location_to::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px transparent;
+    background-color: transparent;
+}
+
+.location_from::-webkit-scrollbar, .location_to::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+.location_from::-webkit-scrollbar-thumb, .location_to:-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
+.cityicon{
+    margin-left: 5px;
+}
+#to, #from {
+    width: 119px;
+}

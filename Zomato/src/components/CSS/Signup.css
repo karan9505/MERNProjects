@@ -1,0 +1,205 @@
+#signupback
+{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+}
+#signupwindow
+{
+    position: absolute;
+    top:40px;
+    height: 630px;
+    left:535px;
+    width: 450px;
+    background-color: white;
+    border-radius: 5px;
+    color: rgba(0,0,0,0.8);
+}
+#signupw1
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 400px;
+    left: 22px;
+    justify-content: space-between;
+    top:-10px;
+}
+
+#signuphead
+{
+    font-size: 30px;
+}
+#signupx
+{
+    height: 20px;
+    width: 25px;
+    position: relative;
+    left: 10px;
+}
+#tc
+{
+    display: flex;
+    position: absolute;
+    font-size: 13px;
+    word-spacing: 2px;
+    top:555px;
+    left: 25px;
+    color: rgba(0,0,0,0.6);
+
+}
+.agred
+{
+    color: rgba(239,79,95,1);
+    text-decoration: none;
+}
+#agreetext
+{
+    position: absolute;
+    width: max-content;
+    left:30px;
+    top:-1px;
+    line-height: 20px;
+}
+#agree
+{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border: 2px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    position: absolute;
+}
+#agree:checked
+{
+    background-color: rgba(239,79,95,0.5);
+    border-color: rgba(239,79,95,1);
+}
+#createacc
+{
+    position: absolute;
+    color: white;
+    letter-spacing: 1px;
+    border:none;
+    outline: none;
+    top:500px;
+    left:22px;
+    width: 407px;
+    height: 43px;
+    border-radius: 7px;
+    font-size: 17px;
+    background-color: rgba(239,79,95,1);
+
+}
+#createacc:hover
+{
+    background-color: rgba(220,53,70,0.9);
+    cursor: pointer;
+}
+
+#ahacc
+{
+    position: absolute;
+    display: flex;
+    width: 230px;
+    bottom: -8px;
+    left:23px;
+    align-items: flex-end;
+    width: 400px;
+    height: 30px;
+    padding-bottom: 5px;
+    font-size: 17px;
+}
+#signupfname,#signuplname,#signupphone,#signupadd,#signupques,#signuppass,#signuprpass,#signupans
+{
+    position: absolute;
+    top:70px;
+    width: 174px;
+    left:22px;
+    outline: none;
+    height: 42px;
+    border-radius: 5px;
+    border:1px solid rgba(0,0,0,0.2);
+    font-size: 20px;
+    color: rgba(0,0,0,0.7);
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgba(0,0,0,0.7);
+}
+#signuplname
+{
+    left:233px;
+}
+#signupphone
+{
+    left:22px;
+    width: 386px;
+    top:140px;
+}
+#signupadd
+{
+    left:22px;
+    width: 386px;
+    top:210px;
+    word-break: keep-all;
+}
+#signupadd textarea
+{
+    width: 10px;
+}
+#signupques
+{
+    top:280px;
+    height: 45px;
+    width: 407px;
+}
+#signupans
+{
+    top:350px;
+    width: 385px;
+}
+#signuppass,#signuprpass
+{
+    top:420px;
+}
+#signuprpass
+{
+    left: 233px;
+}
+#sf1,#sf2,#sf3,#sf4,#sf5,#sf6,#sf7,#sf8
+{
+    position: absolute;
+    color: rgba(215,65,85);
+    top:106px;
+    left:23px;
+    font-size: 12px;
+    font-weight: 0;
+}
+#sf3
+{
+    top:176px;
+}
+#sf4
+{
+    top:246px;
+}
+#sf5
+{
+    top:316px;
+}
+#sf6
+{
+    top:386px;
+}
+#sf8,#sf7
+{
+    top:456px;
+}
+#sf8,#sf2
+{
+    left: 233px;
+}

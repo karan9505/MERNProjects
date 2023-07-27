@@ -1,0 +1,258 @@
+.AdminHead
+{
+    position: absolute;
+    display: flex;
+    width: max-content;
+    height: 90%;
+    top:5%;
+    width: 34%;
+    border-right: 1px solid rgba(75,0,130,0.3);
+}
+#Tag0,#Tag1
+{
+    position: absolute;
+    border-bottom: solid 2px rgba(75,0,130,0.3);
+    color: rgba(75,0,130,1);
+    width: max-content;
+    font-weight: 600;
+    font-size: 70px;
+    font-family: Comic Sans MS, cursive;
+    animation: breath 3s infinite forwards;
+}
+@keyframes breath {
+  50% {
+    transform: scaleX(1.05) scaleY(1.05);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+#AdminDP
+{
+    position: absolute;
+    height: 70px;
+    top:20px;
+    left: 50px;
+    border: 6px solid rgba(75,0,130,1);
+    border-radius: 60px;
+    animation: rotation 10s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+    
+  }
+#Tag0
+{
+    position: absolute;
+    top: -70px;
+    left: 180px;
+}
+#Tag1
+{
+    left: 30px;
+    top:50px;
+}
+#AddButton
+{
+  background-color:rgba(75,0,130,1);
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 15px;
+  font-weight: 100;
+  height: 40px;
+  width: 200px;
+  border-radius: 25px;
+  position: absolute;
+  top:250px;
+  left: 20px;
+}
+.AdminLeft
+{
+    border: 1px solid black;
+    position: absolute;
+    width: 55%;
+    left: 545px;
+    top:4%;
+    height: 92%;
+    background-color: rgba(75,0,130,0.5);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+}
+
+#addquiztitle
+{
+    background-color: rgba(75,0,130,0.5);
+    border: none;
+    outline: none;
+    height: 50px;
+    position: absolute;
+    width: 60%;
+    left:18%;
+    top:10px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+::placeholder{
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-size: 15px;
+}
+#TitleSubmit
+{
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: rgba(75,0,130,1);
+  height: 30px;
+  width: 150px;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  top:70px;
+  left: 39%;
+}
+
+#addquestion
+{
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: rgba(75,0,130,1);
+  height: 30px;
+  width: 150px;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  top:105px;
+  left: 39%;
+}
+
+#QuestionList
+{
+  position: absolute;
+  top:180px;
+  width: 90%;
+  left:5%;
+  height: 300px;
+  overflow-y: scroll;
+}
+.QuestionForm
+{
+  display: flex;
+  flex-direction: column;
+}
+#sendquiz
+{
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: rgba(75,0,130,1);
+  height: 30px;
+  width: 150px;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  top:140px;
+  left: 39%;
+}
+.Question,.optionA,.optionB,.optionC,.optionD,.Question,.Marks,.correct,.Add
+{
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  font-size: 10px;
+  position: relative;
+  top:30px;
+  color: white;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  padding-left: 5px;
+}
+.Question
+{
+  width: 98%;
+}
+.optionA
+{
+  top:50px;
+  width: 40%;
+}
+.optionB
+{
+  top:20px;
+  width: 40%;
+  left:395px;
+}
+.optionC
+{
+  top:50px;
+  width: 40%;
+}
+.optionD
+{
+  top:19px;
+  width: 40%;
+  left:395px;
+
+}
+.correct
+{
+  top:50px;
+  width: 40%;
+}
+.Marks
+{
+  top:19px;
+  width: 40%;
+  left: 395px;
+}
+.Add
+{
+  top:70px;
+  border: none;
+  outline: none;
+  background-color: rgba(75,0,130,1);
+  height: 30px;
+  width: 150px;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  left:38%;
+}
+::-webkit-scrollbar {
+  background-color: rgba(75,0,130,0.5);
+  width: 3px;
+  border-radius: 20px;
+  position: absolute;
+  height: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(75,0,130,1);
+  border-radius: 20px;
+  
+}
+.userHome,.userLogout,.userLogoutP
+{
+  position: absolute;
+  padding: 5px;
+  height: 25px;
+  background-color: rgba(75,0,130,0.3);
+  border-radius: 10px;
+  top:340px;
+  left:20px;
+}
+.userLogout
+{
+  left:60px;
+  height: 35px;
+  padding: 0px;
+}.userLogoutP
+{
+  top:350px;
+}

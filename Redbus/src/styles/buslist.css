@@ -1,0 +1,43 @@
+.busname{
+    display: flex;
+}
+.rating{
+    margin-top: 20px;
+    display: flex;
+}
+.busname  p{
+    width: 25%;
+}
+.rating p{
+    width: 25%;
+}
+.buslist{
+    margin-left: 15%;
+    width: 70%;
+    border: 1px solid black;
+}
+.button{
+   
+    width: 12%;
+    flex-direction: column;
+    display: flex;
+    margin-left: 80%;
+    margin-top: -10%;
+}
+#route{
+    border-radius: 20%;
+    color: white;
+    background-color: #d84e55;
+    margin-bottom: 20px;
+}
+#edit{
+    border-radius: 20%;
+    color: white;
+    background-color: #d84e55;
+    margin-bottom: 20px;
+}
+#delete{
+    border-radius: 20%;
+    color: white;
+    background-color: #d84e55;
+}

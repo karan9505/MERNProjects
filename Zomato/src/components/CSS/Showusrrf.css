@@ -1,0 +1,72 @@
+.Addmorewindow
+{
+    position: absolute;
+    height:550px;
+    overflow-y: scroll;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    width: 500px;
+    left:475px;
+    border-radius: 20px;
+    top:35px;
+}
+#artext6
+{
+    position: absolute;
+    color: rgba(239,79,95,1);
+    font-size: 25px;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: max-content;
+    text-align: center;
+    height: 35px;
+    padding-top: 4px;
+    border-radius: 15px;
+    top:10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.SMFlist
+{
+    position: absolute;
+    top:90px;
+}
+#orderFoods
+{
+    border: none;
+    outline: none;
+    background-color:  rgba(239,79,95,1);
+    position: relative;
+    top:0px;
+    left: 150px;
+    width: 200px;
+    font-size: 20px;
+    height: 40px;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+.selectedfoodc
+{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border: 2px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    position: absolute;
+    top:152px;
+    left: 70px;
+}
+.selectedfoodc:checked
+{
+    background-color: rgba(239,79,95,0.5);
+    border-color: rgba(239,79,95,1);
+}
+#selectfood
+{
+    position: absolute;
+    left: 25px;
+    color: rgba(239,79,95,1);
+    top:156px;
+}

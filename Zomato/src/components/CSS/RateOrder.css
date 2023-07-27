@@ -1,0 +1,87 @@
+.star{
+    visibility: hidden;
+    
+}
+.FoodItem
+{
+    color: black;
+}
+#rbback
+{
+    position: absolute;
+    height:84%;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 30%;
+    left:35%;
+    border-radius: 20px;
+    top:8%;
+}
+#rdatawrp
+{
+    position: absolute;
+    top:80px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 9px;
+    padding: 30px;
+    color: rgba(239, 79, 95, 0.9);
+    font-size: 20px;
+    left:50px;
+    height: 410px;
+    overflow-y: scroll;
+    width: 290px;
+}
+.ordfood
+{
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.RestaurantRating
+{
+    margin-bottom: 90px;
+    font-weight: 600;
+}
+.starlist
+{
+    position: absolute;
+    left:-41px;
+    margin-top: 25px;
+    font-weight: 900;
+}
+.reviewtxt,.resrev
+{
+    position: relative;
+    top:40px;
+    background-color: rgba(239, 79, 95, 0.7);
+    outline: none;
+    padding: 5px;
+    padding-top: 9px;
+    border: none;
+    color: rgba(255, 255, 255, 0.9);
+    width: 260px;
+    height: 30px;
+    font-size: 20px;
+    padding-left: 20px;
+    border-radius: 12px;
+}
+.resstar
+{
+    color: black;
+    position: absolute;
+    left:9px;
+    top:55px;
+}
+#rsub
+{
+    border: none;
+    outline: none;
+    background-color:  rgba(239,79,95,1);
+    position: relative;
+    top:0px;
+    height: 40px;
+    width: 152px;
+    border-radius: 12px;
+    color:rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    left:70px;
+}

@@ -1,0 +1,53 @@
+#AttemptQuiz
+{
+    position: absolute;
+    width: 80%;
+    top:3%;
+    height: 475px;
+    background-color: rgba(255,255,255,0.3);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 30px;
+    left:6%;
+    overflow-y: scroll;
+    color: rgba(75,0,130,1);
+}
+.question
+{
+    background-color: rgba(255,255,255,0.3);
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-top: 1px;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    height: 170px;
+}
+.qreview
+{
+    border: none;
+    outline: none;
+    position: absolute;
+    margin-top: 15px;
+    height: 20px;
+    background-color: rgba(75,0,130,0.3);
+    padding: 5px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+.quizatmpbutton
+{
+border: none;
+  outline: none;
+  background-color: rgba(75  , 0, 130, 1);
+  color: rgba(255, 255, 255, 0.9);
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 12px;
+  position: relative;
+  top:10px;
+  width: 100px;
+  left: 240px;
+  margin-bottom: 30px;
+  font-size: 17px;
+}

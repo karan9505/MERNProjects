@@ -1,0 +1,44 @@
+.UserOrders
+{
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 62%;
+    border-radius: 20px;
+    padding: 20px;
+    padding-left: 40px;
+    left: 13%;
+    top:24%;
+    height: 350px;
+    overflow-y: scroll;
+    color: rgba(239,79,95, 1);
+
+}
+.ordback
+{
+    position: absolute;
+    height:84%;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 30%;
+    left:35%;
+    border-radius: 20px;
+    top:8%;
+}
+.Order
+{
+    position: relative;
+    margin-bottom: 100px;
+}
+.Rateb
+{
+    border: none;
+    outline: none;
+    background-color:  rgba(239,79,95,1);
+    position: relative;
+    top:5px;
+    width: 140px;
+    border-radius: 12px;
+    color:rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    left:60px;
+    height: 30px;
+}

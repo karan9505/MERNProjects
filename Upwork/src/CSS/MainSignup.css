@@ -1,0 +1,202 @@
+#MSNavbar
+{
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    left:0px;
+    top:0px;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+}
+#MSL1
+{
+    position: absolute;
+    right: 20px;
+    font-size: 13px;
+    top:10px;
+}
+#MSL1>span
+{
+    color: rgb(20, 168, 0);
+}
+#MSL1>span:hover
+{
+    border-bottom:1px solid rgb(20, 168, 0);
+}
+#MainSigupBoard
+{
+    border: 1px solid rgba(0,0,0,0.1);
+    height: 760px;
+    width: 690px;
+    position: absolute;
+    top:94px;
+    left:420px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#MSL2
+{
+    position: absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+#MSBD
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    position: absolute;
+    top:100px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 30px;
+}
+#MSBD1,#MSBD2
+{
+    margin: 5px;
+    outline: none;
+    border: none;
+    height: 40px;
+    font-size: 14px;
+}
+#MSBD1
+{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#MSBD2
+{
+    background-color: rgb(66, 133, 244);
+    border-radius: 20px;
+    color: white;
+}
+#GoogleImg
+{
+    position: absolute;
+    height: 37px;
+    border-radius: 20px;
+    top:56px;
+    left: 6px;
+}
+#AppleImg
+{
+    position: absolute;
+    height: 14px;
+    top:17px;
+    left: 231px;
+}
+#MSL3
+{
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    color: rgba(0,0,0,0.5);
+    font-size: 15px;
+    width: max-content;
+    top:100px;
+    left: 297px;
+}
+.MSinputs
+{
+    padding: 9px;
+    border: 2px solid rgba(0,0,0,0.1);
+    outline: none;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 260px;
+    border-radius: 10px;
+}
+#MSNames
+{
+    position: absolute;
+    top:260px;
+    width: 90%;
+    justify-content: space-between;
+    display: flex;
+}
+#MSEmail
+{
+    position: absolute;
+    top:320px;
+    width: 85%;
+}
+#MSPassword
+{
+    position: absolute;
+    top:380px;
+    width: 85%;
+}
+#MScountry
+{
+    position: absolute;
+    top:440px;
+    width: 90%;
+}
+#MScheck1
+{
+    accent-color: rgb(16,138,0);
+    height: 18px;
+    width: 18px;
+}
+.MSCD
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top:500px;
+    left:30px;
+}
+.MSCD>label
+{
+    font-size: 13px;
+}
+.MSCheck
+{
+    margin-right: 10px;
+}
+#MSCD2
+{
+    top:545px;
+}
+#MSCAButton
+{
+    outline: none;
+    border: none;
+    background-color: rgb(16,138,0);
+    height: 40px;
+    color: white;
+    width: 90%;
+    top:617px;
+    position: absolute;
+    border-radius: 20px;
+    font-size: 16px;
+}
+#MSCAButton:hover
+{
+    cursor: pointer;
+    background-color: rgb(20, 168, 0);
+}
+#MSL4
+{
+    position: absolute;
+    top:680px;
+    font-size: 14px;
+}
+#MSL4>span
+{
+    color: rgb(16,138,0);
+}
+#MSLastD
+{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top:900px;
+}

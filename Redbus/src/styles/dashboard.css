@@ -1,0 +1,41 @@
+.Dashboard{
+    width: 314px;
+}
+.dash{
+    color: white;
+    width: 100%;
+    background-color: #d84e55;
+    height: 100vh;
+    padding-top: 64px;
+}
+.admininfo{
+    border: 1px solid black;
+    padding-left: 10%;
+    padding-top: 15%;
+    display: flex;
+}
+#admin{
+    margin-left: 49%;
+}
+.link {
+    margin-left: 10%;
+    margin-top: 10%;
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+}
+.link p{
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    width: 164px;
+    background-color: #d83535;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-left: 10%;
+    cursor: pointer;
+}
+ .link :hover{
+    color: black;
+}

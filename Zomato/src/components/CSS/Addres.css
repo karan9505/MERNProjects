@@ -1,0 +1,123 @@
+#Addresback
+{
+    background-image: url(../../../public/IMAGES/Adminback.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    filter: blur(5px);
+    z-index: 0;
+}
+#AddRestaurant
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position:absolute;
+    width: 26%;
+    height: 70%;
+    top:15%;
+    left: 35%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+}
+#Addresform
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left:50px;
+    width: 340px;
+
+}
+#restaurantname,#restaurantaddress,#restaurantImages,#enterImage,#addImage,#addresssubmit
+{
+    position: absolute;
+    height: 30px;
+    top:80px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 330px;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 20px;
+    color: rgba(0,0,0,0.6);
+    left:-25px;
+}
+#restaurantaddress
+{
+    top:150px;
+}
+#restaurantImages
+{
+    top:220px;
+    height: 100px;
+    display: flex;
+    overflow-x: scroll;
+    padding-top: 15px;
+}
+#enterImage
+{
+    width: 270px;
+    top:367px;
+}
+#addImage,#addresssubmit
+{
+    border: none;
+    background-color: rgba(239,79,95,1);
+    color: white;
+    font-size: 16px;
+    position: absolute;
+}
+#addImage
+{
+    top:370px;
+    width: 53px;
+    height: 50px;
+    font-size: 43px;
+    padding: 0px;
+    text-align: center;
+    left:275px;
+}
+#addresssubmit
+{
+    top:440px;
+    left: -25px;
+    height: 40px;
+    padding: 0px;
+    font-size: 20px;
+    width: 355px;
+}
+#arhead
+{
+    color: rgba(0,0,0,0.6);
+    position: absolute;
+    top:0px;
+    font-size: 30px;
+    width: max-content;
+    left:24px;
+    font-weight: 100;
+}
+.Addedimg
+{
+    height: 70px;
+    margin-right: 10px;
+}
+.imgwrp
+{
+    display: flex;
+    flex-direction: column;
+}
+.imgx
+{
+    margin-top: 5px;
+    width: 20px;
+    background-color: rgba(239,79,95,1);
+    outline: none;
+    border: none;
+    text-align: center;
+    color: white;
+    padding-top: 2px;
+    border-radius: 20px;
+}
+

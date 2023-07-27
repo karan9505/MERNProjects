@@ -1,0 +1,31 @@
+.ShowSolvedQuiz
+{
+    background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 0px;
+  width: 80%;
+  left: 11%;
+  position: absolute;
+  padding-top: 20px;
+  overflow-y: scroll;
+  height: 440px;
+  top:92px
+}
+.aunq1,.aunq2
+{
+    border: none;
+  outline: none;
+  background-color: rgba(75  , 0, 130, 1);
+  color: rgba(255, 255, 255, 0.9);
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 12px;
+  position: absolute;
+  top:27px;
+  width: 100px;
+  left: 300px;
+}
+.aunq2
+{
+  top:67px;
+}

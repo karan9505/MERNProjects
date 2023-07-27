@@ -1,0 +1,113 @@
+.navbar{
+    background: #d84f57;
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    z-index: 999;
+    
+}
+.navbar-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.container_part{
+    width: 50%;
+    display: flex;
+}
+.container_part p{
+    cursor:pointer;
+}
+.logo_container{
+    margin-left: 280px;
+    margin-top: 2px;
+    align-items: center;
+    display: flex;
+}
+.containt_container{
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+}
+.containt{
+    display: flex;
+}
+.containt p{ 
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 24px;
+    text-decoration: none;
+
+}
+.containt span{
+    font-weight: 700;
+}
+.book_management{
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.book_management h3{
+    font-size: 15px;
+    color: #fff;
+    margin: 0;
+}
+.profile_sign{
+    display: flex;
+    align-items: center;
+}
+.signin_icon{
+    margin-left: 25px;
+}
+.signin_icon h3{
+    margin:0;
+}
+.profile_sign_collaps{
+    position: absolute;
+    width: 125px;
+    background: #fff;
+    border-radius: 4px;
+    top: 55px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    box-shadow: 0px 1px 6px 0px black;
+    display: none;
+}
+.profile_sign_collaps p{
+    margin: 0;
+    margin-bottom: 10px;
+    color:#3e3e52;
+    font-size: 15px;
+}
+.book_management_head{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.manage_booking_collaps{
+    position: absolute;
+    width: 125px;
+    background: #fff;
+    border-radius: 4px;
+    top: 55px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    box-shadow: 0px 1px 6px 0px black;
+    display: none;
+}
+.manage_booking_collaps p{
+    margin: 0;
+    margin-bottom: 10px;
+    color:#3e3e52;
+    font-size: 15px;
+}
+.dashboardt h3{
+    margin-left: 5px;
+    font-size: 15px;
+    margin-top: 23px;
+    color: white;
+    cursor: pointer;
+}

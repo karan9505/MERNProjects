@@ -1,0 +1,160 @@
+#LPNavbar
+{
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    left:0px;
+    top:0px;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+}
+#LPBoard
+{
+    border: 1px solid rgba(0,0,0,0.1);
+    height: 582px;
+    width: 508px;
+    position: absolute;
+    top:122px;
+    left:505px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#LPL1
+{
+    position: absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.LPInput
+{
+    padding: 9px;
+    border: 2px solid rgba(0,0,0,0.1);
+    outline: none;
+    font-size: 15px;
+    padding-left: 35px;
+    padding-right: 15px;
+    width: 290px;
+    border-radius: 10px;
+}
+#LPEmail
+{
+    position: absolute;
+    top:95px;
+}
+#LPPassword
+{
+    position: absolute;
+    top:155px;
+}
+.LPButton
+{
+    background-color: rgb(16, 138, 0);
+    color: white;
+    border: none;
+    outline: none;
+    top:215px;
+    position: absolute;
+    width: 340px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+#LPButtons
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top:300px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    height: 180px;
+    width: 340px;
+    justify-content: space-evenly;
+}
+#LPGB,#LPAB
+{
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: rgb(66, 133, 244);
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+}
+#LPAB
+{
+    border: 1px solid black;
+    color:  black;
+    background-color: white;
+}
+#LPGimg
+{
+    position: absolute;
+    height: 36px;
+    top:35px;
+    border-radius: 20px;
+    left: 1px;
+}
+#LPAimg
+{
+    position: absolute;
+    height: 15px;
+    top:118px;
+    left: 80px;
+}
+#LPTL1,#LPTL2
+{
+    position: absolute;
+    top:-25px;
+    width: max-content;
+    background-color: white;
+    padding-right: 7px;
+    padding-left: 7px;
+    left: 140px;
+    color: rgba(0, 0, 0,0.3);
+}
+#LPTL2
+{
+    top:157px;
+    left:50px;
+}
+#LPSButon
+{
+    background-color: white;
+    border: 2px solid rgb(16, 138, 0);
+    color: rgb(16, 138, 0);
+    height: 40px;
+    font-size: 16px;
+    position: absolute;
+    top:515px;
+    width: 200px;
+    border-radius: 20px;
+}
+#LPBlack
+{
+    position: absolute;
+    width: 98%;
+    height: 120px;
+    top:735px;
+    left: 1%;
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius: 10px;
+
+}
+#LPLastDiv
+{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top:870px;
+}

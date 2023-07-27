@@ -1,0 +1,149 @@
+.forgetpass_page{
+    width: 100%;
+    background: #dcd9d9;
+    margin: 0;
+    height: 844px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: url(https://wallpaperaccess.com/full/6367130.jpg); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-image: linear-gradient(#7300fc, black); */
+}
+.forgetpass_container{
+    height: 60%;
+    width: 60%;
+    background: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.inner_forgetpass{
+    width: 50%;
+    display: block;
+}
+.forgetpass_logo{
+    width: 100%;
+    height: 106px;
+}
+.forgetpass_logo img{
+    width: 96px;
+    margin-top: 30px;
+}
+.forgetpass_info{
+    width: auto;
+    height: auto;
+}
+.forgetpass_head{
+
+}
+.forgetpass_head h1{
+    margin: 0;
+    margin-bottom: 30px;
+    color: #000000db;
+    margin-top: 20px;
+    font-size: 28px;
+    font-family: cursive;
+}
+.forgetpass_head p{
+
+}
+.input_method_container{
+    width: auto;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+/* .input_method{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */
+.input_method label{
+    
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-bottom: 1px;
+
+}
+/* .input_method input{
+    width: 220px;
+    height: 30px;
+    padding-left: 15px;
+    background: #8e6df7;
+    border-radius: 20px;
+} */
+
+.user_buttons{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    height: 45px;
+    width: 107px;
+    background: #4a92da;
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    color: #333131;
+    font-weight: 600;
+}
+.button:hover{
+    box-shadow: 0px 0px 11px 0px black;
+    transition: 300ms ease;
+}
+.signup{
+
+}
+.forgetpass{
+
+}
+.img1{
+    width: 175px;
+    position: absolute;
+    bottom: 156px;
+    right: 328px;
+    overflow: hidden;
+}
+.img2{
+    width: 190px;
+    position: absolute;
+    bottom: 168px;
+    right: 698px;
+}
+.img3{
+    width: 439px;
+    height: 460px;
+}
+.backgdisp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  #d84f57;
+}
+.input_method select{
+    margin-left: 9px;
+    height: 25px;
+    margin-bottom: 3px;
+    background: #efebff00;
+    font-size: 14px;
+    font-family: monospace;
+    width: 210px;
+}
+.input_method p{
+    margin: 0;
+    margin-left: 13px;
+    font-size: 15px;
+    color: red;
+    display: none;
+
+}

@@ -1,0 +1,39 @@
+.cancel_ticket{
+    margin-top: 10%;
+}
+body{
+    background-color: #f0f1f2;
+}
+.info{
+    margin-left: 15%;
+    width: 70%;
+    margin-top: 5%;
+}
+#ticket_No{
+    background-color: transparent;
+    width: 328px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid #747f8d;  
+    margin-left: 0%;
+}
+#phoneno{
+    background-color: transparent;
+    width: 328px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid #747f8d;
+    
+    
+    margin-left: 50px;
+}
+.select{
+    margin-top: 50px;
+    margin-left: 300px;
+    background-color: #d84e55;
+    color:wheat;
+    height: 40px;
+    width: 250px;
+}

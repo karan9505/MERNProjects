@@ -1,0 +1,358 @@
+.showbus{
+    margin-top: 0;
+    background: transparent;
+    min-height: 700px;
+    padding-top: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.showbus_container{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.buslist1{
+    display: flex;
+    flex-direction: column;
+    border-color: #0000007d;
+    border: 43px;
+    border-width: 10px;
+    border: 1px solid;
+    border: 1.8px solid rgb(221, 221, 221);
+}
+.buslist1:hover{
+    box-shadow: 0px 9px 20px 0px;
+    transition: 300ms ease;
+   
+}
+.bus_info_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.bus_img{
+    display: flex;
+    width: 145px;
+    margin-left: 30px;
+    height: 150px;
+    background-color: blueviolet;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.bus_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.bus_info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    text-align: left;
+}
+.bus_info h1{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.bus_info h3{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.bus_info p{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.search_bus{
+    text-align: start;
+    margin-left: 52px;
+    margin-bottom: 10px;
+}
+.search_bus input{
+    width: 260px;
+    height: 35px;
+}
+.bus_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buseswiper{
+    width: 1292px;
+    background: #d61cd6; 
+}
+.swiper{
+    overflow: hidden;
+}
+.bus_information{
+    width: 375px;
+    height: 290px;
+}
+.swiper-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.bus{
+    background-image: linear-gradient(#7300fc, black);
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .bus_info_part{
+    height: 175px;
+  }
+  .bus_part1{
+    width: 362px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .bus_part2{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .bus_part3{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .bus_part4{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .bus_part5{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .bus_part6{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .bus_part7{
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .bus_part8{
+    width: 103px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    cursor: pointer;
+  }
+  .bus_part8 button{
+    background-color: #d84e55;
+    border: none;
+    width: 90px;
+    color: white;
+    height: 33px;
+  }
+  .bus_layout{
+    width: 230px;
+    border: 0.8px solid;
+    border-radius: 10px;
+    padding-bottom: 16px;
+  }
+  .stearing{
+    width: 100%;
+    height: 40px;
+    border-bottom: 0.4px solid;
+  }
+  .stearing img{
+    width: 20px;
+    margin-top: 10px;
+    margin-left: 150px;
+  }
+  .seat_icon img{
+    text-align: left;
+    background-color: red;
+    width: 36px;
+    /* margin-left: 11px;
+    margin-right: 10px;
+    margin-top: 5px; */
+  }
+  .seats{
+    text-align: left;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+.bus_layout_section{
+  width: 50%;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bus_details{
+  display: flex;
+  width: 83%;
+  background-color: #eeeded;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 140px;
+}
+.bus_info_single{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 50%;
+  flex-direction: column;
+}
+.seat_legend{
+  width: 283px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.available{
+  width: 89px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-right: 5px;
+}
+.available_seat{
+  width: 25px;
+    height: 18px;
+    border: 1px solid #867e7e;
+    margin-right: 5px;
+}
+.unavailable_seat{
+  width: 25px;
+  height: 18px;
+  background-color:  #737070;
+  margin-right: 5px;
+}
+.women_seat{
+  width: 25px;
+  height: 18px;
+  background-color: #aa6cf5;
+  margin-right: 5px;
+}
+.bus_ticket_info{
+  width: 390px;
+  text-align: initial;
+  height: 345px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0px 0px 8px 0px black;
+  margin-bottom: 15px;
+}
+.seat_count{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fairdetails{
+  display: flex;
+  flex-direction: column;
+}
+.fairdetails h1{
+  margin: 0;
+  margin-bottom: 15px;
+}
+.amount{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.amount h3{
+  margin: 0;
+  font-size: 16px;
+}
+.bus_ticket_info p{
+  margin: 0;
+  font-size: 10px;
+}
+.proceed_to_book{
+  width: 100%;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book_button{
+  background-color: #d84e55;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 17px;
+  width: 45%;
+  height: 35px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.book_button h3{
+  font-size: 14px;
+  margin-top: 10px;
+}
+.admin_button{
+  background-color: #d84e55;
+  margin-left: 30px;
+  margin-right: 50px;
+  margin-top: 2px;
+  width: 63%;
+  height: 35px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin_button h3{
+  font-size: 11px;
+  margin-top: 10px;
+}
+.imgc{
+  text-align: left;
+  background-color: red;
+  width: 36px;
+  margin-left: 11px;
+  margin-right: 10px;
+  margin-top: 5px;
+}

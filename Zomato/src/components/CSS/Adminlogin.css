@@ -1,0 +1,166 @@
+.restaurant
+{
+    padding: 20px;
+    height: 190px;
+    margin-bottom: 55px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.6);
+    overflow-y: scroll;
+    width: 855px;
+}
+.hotelimg
+{
+    height:150px;
+    width: 150px;
+    margin: 20px;
+    top: 20px;
+    border-radius: 7px;
+}
+.AdminLogin
+{
+    position: absolute;
+    height:510px;
+    overflow-y: scroll;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    width: 900px;
+    left:275px;
+    border-radius: 20px;
+    top:35px;
+    padding-top: 80px;
+}
+.resedit,.resdelet,#addRestaurant1,#addRestaurant2,.resviewmenu
+{
+    border: none;
+    outline: none;
+    background-color:  rgba(239,79,95,1);
+}
+.resdelet,.resedit,.resviewmenu
+{
+    position: absolute;
+    top:140px;
+    height: 30px;
+    width: 152px;
+    border-radius: 12px;
+    color:rgba(255, 255, 255, 0.9);
+    font-size: 15px;
+    left:55px;
+}
+.resedit
+{
+    top:100px;
+}
+.resviewmenu
+{
+    top:60px;
+}
+#addRestaurant1,#addRestaurant2
+{
+    position: relative;
+    top:20px;
+    left: 350px;
+    width: 200px;
+    font-size: 20px;
+    height: 40px;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+#addRestaurant2
+{
+    top:100px;
+    left: 0px;
+}
+
+.resname
+{
+    color: rgba(239,79,95,0.9);
+    font-weight: 600;
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    left:80px;
+    font-size: 22px;
+    margin-top: 20px;
+}
+#wcadmin
+{
+    color: rgba(239,79,95,0.9);
+    position: absolute;
+    top:-180px;
+    font-size: 60px;
+    border-bottom: 1px solid rgba(239,79,95,0.9);
+}
+#nores
+{
+    color: rgba(239,79,95,0.9);
+}
+.Arbg
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 20px;
+}
+#imggrp
+{
+    position: absolute;
+    left: 300px;
+    display: flex;
+    width: 580px;
+    overflow-y: auto;
+}
+#Adlogback
+{
+    position: absolute;
+    background-image: url(../../../public/IMAGES/Adminback.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    filter:blur(7px);
+}
+::-webkit-scrollbar {
+    background-color: rgba(0,0,0,0);
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(239,79,95,0.9);
+    border-radius: 20px;
+    width: 5px;
+    height: 5px;
+}
+#artext2
+{
+    position: absolute;
+    top:0px;
+    color: rgba(239,79,95,1);
+    font-size: 25px;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 310px;
+    text-align: center;
+    height: 35px;
+    padding-top: 4px;
+    border-radius: 15px;
+}
+#Admintag
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding: 10px;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.9);
+    left:40px;
+    height: 155px;
+    border-radius: 20px;
+    top:40px;
+}

@@ -1,0 +1,142 @@
+.PlaceOrder
+{
+    position: absolute;
+}
+.PlaceOrder
+{
+    position: absolute;
+    height:84%;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 30%;
+    left:35%;
+    border-radius: 20px;
+    top:8%;
+}
+.orderimg
+{
+    height:190px;
+    width: 190px;
+    border-radius: 7px;
+    position: absolute;
+    left:135px;
+}
+.FoodItem
+{
+    position: relative;
+    color: rgba(239,79,95,1);
+    border-radius: 10px;
+    font-size: 18px;
+    left:50px;
+    width: 280px;
+}
+.Totalamt
+{
+    position: absolute;
+    top:380px;
+    left:45px;
+    color: rgba(239,79,95,1);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    font-size: 25px;
+    width: 350px;
+    border-radius: 9px;
+    text-align: center;
+
+
+}
+#deliveryAddress
+{
+    position: absolute;
+    outline: none;
+    border: none;
+    background-color: rgba(239, 79, 96, 0.6);
+    position: absolute;
+    color: rgba(255, 255, 255, 0.9);
+    padding-left: 20px;
+    left: 45px;
+    border-radius: 9px;
+    font-size: 20px;
+    top:470px;
+    height: 30px;
+    width: 350px;
+    padding: 10px;
+    font-size: 25px;
+}
+#addmore,#ordsub
+{
+    border: none;
+    outline: none;
+    background-color:  rgba(239,79,95,1);
+    position: absolute;
+    top:540px;
+    height: 30px;
+    width: 180px;
+    border-radius: 12px;
+    color:rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    left:45px;
+    height: 40px;
+}
+#ordsub
+{
+    left: 235px;
+}
+.ordi,.ordd
+{
+    border: none;
+    outline: none;
+    background-color: rgba(239,79,95,1);
+    height: 30px;
+    width: 30px;
+    font-size: 25px;
+    margin: 5px;
+    border-radius: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+.Orderform
+{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    height: max-content;
+    width: 370px;
+    left:45px;
+    height: 270px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    top:70px;
+    padding-top:50px;
+    color: rgba(239, 79, 96, 0.6);
+}
+.ordqntl,.ordi,.ordd,.ordqnt
+{
+    position: relative;
+    bottom: 35px;
+    
+}
+.ordqnt
+{
+    outline: none;
+    border: none;
+    background-color: rgba(239, 79, 96, 0.6);
+    padding-top: 4px;
+    height: 25px;
+    width: 100px;
+    bottom: 37px;
+    border-radius: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+}
+.Orddishname,.Orddishprice
+{
+    position: relative;
+    bottom: 20px;
+    width: max-content;
+    color: rgba(239, 79, 96, 1);
+}
+.ordqntl
+{
+    color: rgba(239, 79, 96, 1);
+
+}

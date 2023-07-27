@@ -1,0 +1,115 @@
+#SigupBoard
+{
+    border: 1px solid rgba(0,0,0,0.1);
+    height: 450px;
+    width: 690px;
+    position: absolute;
+    top:94px;
+    left:420px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#SBG
+{
+    height: 160px;
+    width: 74%;
+    position: absolute;
+    top:130px;
+    display: flex;
+    justify-content: space-between;
+}
+#SBL1
+{
+    position: absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+.SBGE
+{
+    height: 100%;
+    width: 47%;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 7px;
+}
+.SBGE:hover
+{
+    border: 2px solid rgba(16,168,0,1);
+    cursor: pointer;
+}
+
+.SBradio
+{
+    position: absolute;
+    margin-left: 213px;
+    margin-top: 15px;
+    transform: scale(1.7);
+    accent-color: rgb(20,168,0);
+
+}
+#SBButtonhide
+{
+    position: absolute;
+    background-color: rgba(228,235,228,0.9);
+    border: none;
+    outline: none;
+    cursor:not-allowed;
+    top:330px;
+    height: 40px;
+    width: 43%;
+    border-radius: 20px;
+    font-size: 15px;
+}
+#SBButton
+{
+    position: absolute;
+    background-color: rgb(16,138,0);
+    border: none;
+    outline: none;
+    cursor:pointer;
+    top:330px;
+    height: 40px;
+    width: 43%;
+    border-radius: 20px;
+    font-size: 15px;
+    color: white;
+}
+#SBButton:hover:enabled
+{
+    background-color: rgb(20,168,0);
+}
+#SBFpng,#SBCpng
+{
+    height: 30px;
+    position: absolute;
+    top:20px;
+    margin-left: 20px;
+}
+#SBFpng
+{
+    height: 34px;
+}
+.SBL2
+{
+    position: absolute;
+    font-size: 23px;
+    top:50px;
+    margin-left: 20px;
+}
+#SBL3
+{
+    position: absolute;
+    top:390px;
+    font-size: 13px;
+    word-spacing: 1px;
+}
+#SBL3>span
+{
+    color: rgb(16,138,0);
+}
+#SBL3>span:hover
+{
+    cursor: pointer;
+    border-bottom: 1px solid rgb(16,138,0);
+}

@@ -1,0 +1,241 @@
+.Astro
+{
+  opacity: 0.8;
+  height: 400px;
+  position: absolute;
+  top:180px;
+  left: 360px;
+  transition: 5s;
+  animation: rotationastro 60s infinite linear;
+}
+@keyframes rotationastro {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+.WelcomeLeft
+{
+  display: flex;
+  font-size: 70px;
+  margin: 60px;
+  color: rgba(75,0,130,1);
+  border-right: solid 1px rgba(75,0,130,0.3);
+  width: 525%;
+  font-weight: 500;
+  height: 500px;
+}
+.WelcomeTag
+{
+  height: max-content;
+  position: absolute;
+  top: -25px;
+  height: 290px;
+}
+.LoginButton,.SignupButton
+{
+  background-color:rgba(75,0,130,1);
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 15px;
+  font-weight: 100;
+  height: 40px;
+  width: 200px;
+  border-radius: 25px;
+  transition: 0.1s;
+  text-decoration: none;
+}
+
+.WelcomeRight
+{
+  position: absolute;
+  background-color: rgba(255, 255, 255,0.7);
+  height: 550px;
+  width: 400px;
+  top:30px;
+  left: 830px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 15px rgba(75,0,130,0.5);
+}
+.Tag1,.Tag2,.Tag0
+{
+  border-bottom: solid 2px rgba(75,0,130,0.3);
+  color: rgba(75,0,130,1);
+  width: max-content;
+  font-weight: 600;
+  font-family: Comic Sans MS, cursive;
+  z-index: 2;
+  animation: breath 3s infinite forwards;
+}
+@keyframes breath {
+  50% {
+    transform: scaleX(1.05) scaleY(1.05);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+.Tag1,.Tag2
+{
+  position: relative;
+  bottom: 40px;
+}
+.Tag2
+{
+  bottom: 80px;
+}
+.LoginImg,.SignupImg
+{
+  position: relative;
+  height: 30px;
+  padding: 5px;
+  left: 5px;
+  transition: 0.8s;
+}
+.LoginImg
+{
+  height: 34px;
+  position: relative;
+  bottom: 3px;
+  left: 2px;
+}
+.Login,.Signup
+{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.Login,.Signup
+{
+  position: absolute;
+  top:130px;
+}
+.Signup
+{
+  top:200px;
+}
+
+.LoginHeader
+{
+  border-bottom: 1px solid rgba(75,0,130,1);
+  color: rgba(75,0,130,1);
+  font-size: 25px;
+  width: 300px;
+  padding-bottom:10px;
+  text-align: center;
+
+  font-weight: 100;
+}
+.LoginButton:hover,.SignupButton:hover
+{
+  transform: scale(1.05);
+  box-shadow: 0px 0px 25px rgba(75,0,130,0.5);
+  cursor: pointer;
+}
+.WelcomeRightLower
+{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  position: absolute;
+  top:300px;
+  align-items: center;
+  color: rgba(75,0,130,1);
+}
+.WelcomeRightUpper
+{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  position: absolute;
+  align-items: center;
+  color: rgba(75,0,130,1);
+}
+.LoginSignup
+{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top:80px;
+  left:830px;
+  width: 400px;
+  height: 450px;
+  align-items: center;
+}
+.Google,.Facebook,.Linkedin,.Twitter
+{
+  height: 50px;
+  transition: 0.2s;
+}
+.Google,.Linkedin
+{
+  height: 52px;
+  transition: 0.2s;
+}
+.Icons
+{
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid rgba(75,0,130,0.5);
+  position: relative;
+  padding-top: 30px;
+  width: 300px;
+  justify-content: space-around;
+  width: 250px;
+  bottom:10px;
+}
+.Google:hover,.Facebook:hover,.Linkedin:hover,.Twitter:hover
+{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.Google
+{
+  position: relative;
+  left:8px;
+}
+.Headup
+{
+  position: absolute;
+  top:0;
+  height: 50px;
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  opacity: 0.8;
+}
+.Headdown
+{
+  position: absolute;
+  bottom:0px;
+  height: 50px;
+  width: 100%;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  opacity: 0.8;
+}
+.Minibg
+{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  bottom: 40px;
+}
+.Login:hover .LoginImg,.Signup:hover .SignupImg
+{
+  transform: rotate(360deg);
+}
+.LoginName
+{
+  position: absolute;
+  top:-4px;
+  left: 70px;
+}
+.SignupName
+{
+  position: absolute;
+  top:-4px;
+  left: 70px;
+}
