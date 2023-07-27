@@ -1,11 +1,11 @@
 //Application setup
-const express=require('express');
-const app=express();
+const express = require('express');
+const app = express();
 app.use(express.json());
 
-const cors=require('cors');
+const cors = require('cors');
 app.use(cors({
-    origin:"http://localhost:3000"
+    origin: "http://localhost:3000"
 }))
 //=======================================================================//
 
@@ -14,19 +14,21 @@ require('./databaseConnect.js');
 //=======================================================================//
 
 //API Routes imports
-//1. User Api Routes
-const userRoutes=require('./ROUTES/userRouter.js');
+//1. student Api Routes
+const studentRoutes = require('./ROUTES/studentRouter.js');
+//2. admin Api Routes
+const adminRoutes = require('./ROUTES/adminRouter.js')
 //=======================================================================//
 
 
 //Api routes
-//1. User Api Routes
-app.use('/User',userRoutes)
+//1. student Api Routes
+app.use('/Student', studentRoutes)
 
 //2.Admin Api Routes
-
+app.use('/Admin', adminRoutes)
 //* Default API
-app.use('*',(req,res)=>{
+app.use('*', (req, res) => {
     res.send("Not Found");
     res.end();
 })
@@ -34,7 +36,7 @@ app.use('*',(req,res)=>{
 
 
 //Server
-app.listen(8000,()=>{
+app.listen(8000, () => {
     console.log("Server Started")
     console.log("URL : http://localhost:8000/")
 })

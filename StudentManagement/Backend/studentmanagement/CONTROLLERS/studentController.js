@@ -1,19 +1,21 @@
 const credential = require('../MODELS/credential.js');
+const academics=require('../MODELS/academic.js')
 
-const user=async (req,res)=>{
+const student=async (req,res)=>{
     let result=await credential.find({});
     res.send(result)
 }
 
-const userLogin=async (req,res)=>{
-    let userEmail=await credential.findOne({email:req.body.email});
-    if(userEmail===null || req.body.userType!==userEmail.userType){
+const studentLogin=async (req,res)=>{
+    console.log("Login API Accessed")
+    let studentEmail=await credential.findOne({email:req.body.email});
+    if(studentEmail===null || req.body.userType!==studentEmail.userType){
         console.log("Invalid email");
         res.send({message:"Invalid email"});
         res.end()
         return;
     }
-    else if(userEmail.password!==req.body.password){
+    else if(studentEmail.password!==req.body.password){
         console.log("Invalid password");
         res.send({message:"Invalid password"});
         res.end()
@@ -21,17 +23,17 @@ const userLogin=async (req,res)=>{
     }
     else{
         console.log("Valid Login Data");
-        res.send(userEmail);
+        res.send(studentEmail);
         res.end()
         return;
     }
 }
 
-const userSignup=async (req,res)=>{
+const studentSignup=async (req,res)=>{
     console.log("SignUp API Accessed");
     let checkEmail=await credential.find({email:req.body.email}).count();
     if(checkEmail){
-        res.send({message:"User already exist"})
+        res.send({message:"student already exist"})
         res.end()
         return;
     }
@@ -39,15 +41,19 @@ const userSignup=async (req,res)=>{
     let dbResponse=await newEntry.save();
     if(dbResponse._id!=="")
         res.send({message:"Signup Successful"})
+    if(req.body.userType===0){
+        let newAcademic=new academics({email:req.body.email});
+        dbResponse=await newAcademic.save();
+    }
     res.end();
 }
 
-const userUpdate=async (req,res)=>{
-    res.send("User Update");
+const studentUpdate=async (req,res)=>{
+    res.send("student Update");
     res.end();
 }
 
-const userSearch=async (req,res)=>{
+const studentSearch=async (req,res)=>{
     let data=await credential.find(
         {
             "$or":[
@@ -61,9 +67,9 @@ const userSearch=async (req,res)=>{
 
 
 module.exports={
-    user:user,
-    userLogin:userLogin,
-    userSignup:userSignup,
-    userUpdate:userUpdate,
-    userSearch:userSearch
+    student:student,
+    studentLogin:studentLogin,
+    studentSignup:studentSignup,
+    studentUpdate:studentUpdate,
+    studentSearch:studentSearch
 }

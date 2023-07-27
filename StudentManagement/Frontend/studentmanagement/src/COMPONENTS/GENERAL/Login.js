@@ -13,12 +13,13 @@ export default function Login(props) {
 
     const checkLogin=(e)=>{
       loginData.userType=props.userType;
+      console.log(loginData)
       if(loginData.email==="")
         setEmpty({...setEmpty,ee:"Enter email !"})
       else if(loginData.password==="")
       setEmpty({...setEmpty,pe:"Enter password !"})
       else{
-        axios.post("http://localhost:8000/User/Login",loginData)
+        axios.post("http://localhost:8000/Student/Login",loginData)
         .then((response)=>{
           console.log(response.data)
           if(response.data.message==="Invalid email")

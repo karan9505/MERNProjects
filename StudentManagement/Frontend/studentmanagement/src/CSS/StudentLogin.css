@@ -8,3 +8,200 @@
     background-color: rgba(255, 255, 255,0.9);
     border-radius: 20px;
 }
+.userDeatilBack
+{
+    position: absolute;
+    height: 52%;
+    width: 25%;
+    left:60px;
+    top:40%;
+    background-color: rgba(255, 255, 255,1);
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(227, 79, 79,0.3);
+}
+input[type=file]
+{
+    color: rgba(0,0,0,0);
+}
+#studentImage{
+    position: absolute;
+    width: 160px;
+    left: 58px;
+    height: 160px;
+    border-radius: 100px;
+    border: 1px solid rgb(227, 79, 79);
+    top:33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#studentImage1
+{
+    width: 100%;
+}
+#studentImg 
+{
+    position: absolute;
+    top:67%;
+    width: 16%;
+    left:42%;
+    height: 17%;
+    background-color: rgb(227, 79, 79);
+    z-index: 1;
+    opacity: 0;
+}
+#camera
+{
+    position: absolute;
+    width: 14%;
+    left: 44%;
+    top:74%;
+}
+#studentImg:hover
+{
+    cursor: pointer;
+}
+.LogoutDiv
+{
+    position: absolute;
+    background-color: rgb(227, 79, 79);
+    color: white;
+    display: flex;
+    align-items:center ;
+    justify-content: space-evenly;
+    width: 100px;
+    height: 28px;
+    border-radius: 20px;
+    left: 88px;
+    top:305px;
+    font-size: 13px;
+}
+#LogoutImg
+{
+    height: 15px;
+}
+.LogoutDiv>p
+{
+    position: relative;
+    bottom: 1px;
+}
+.LogoutDiv:hover{
+    cursor: pointer;
+}
+.userDeatilBack
+{
+    color: rgb(227, 79, 79);
+}
+#welcomeP
+{
+    position: absolute;
+    left: 22px;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 22px;
+    line-height: 35px;
+    top:-10px;
+}
+#welcomeP>span
+{
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.welcomeHeading
+{
+    position: absolute;
+    color: rgb(227, 79, 79);
+    font-weight: 100;
+    letter-spacing: 10px;
+    left:60px;
+    line-height: 60px;
+    top:15px;
+}
+.studentDataBack
+{
+    position: absolute;
+    width: 60%;
+    background-color: white;
+    left:34%;
+    height: 84%;
+    top:8%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(227, 79, 79,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(227, 79, 79);
+    font-size: 20px;
+}
+#classDetails
+{
+    position: absolute;
+    display: flex;
+    width: 83%;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    left: 54px;
+    top:170px;
+}
+#welshead
+{
+    letter-spacing: 15px;
+    border-bottom: 1px solid rgb(227, 79, 79);
+    text-align: center;
+    width: 540px;
+    padding-bottom: 3px;
+    font-weight: 100;
+    position: absolute;
+    top:-15px;
+}
+#sname
+{
+    position: absolute;
+    top:80px;
+    left: 54px;
+}
+#marksTable
+{
+    /* border: 1px solid rgb(227, 79, 79); */
+    margin: 0px;
+    padding: 0px;
+    left:0px;
+    position: absolute;
+    width: 84%;
+    left: 8%;
+    top:240px;
+}
+th,td{
+    text-align: center;
+    border: 1px solid rgb(227, 79, 79);
+    margin-left: 12px;
+    height: 30px;
+    font-weight: 100;
+}
+th
+{
+    font-weight: 400;
+}
+#resultDiv
+{
+    position: absolute;
+    display: flex;
+    width: 83%;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    left: 54px;
+    top:495px;
+}
+.datap
+{
+    font-weight: 100;
+
+}
+.datap>span
+{
+    font-weight: 400;
+}

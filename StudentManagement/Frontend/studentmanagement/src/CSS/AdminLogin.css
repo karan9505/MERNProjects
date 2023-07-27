@@ -1,0 +1,107 @@
+#adminSearchInput {
+  /* position: absolute; */
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid rgb(227, 79, 79);
+  border-radius: 20px;
+  padding-left: 40px;
+  outline: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+#adminSearchDiv {
+  position: absolute;
+  top: 90px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 34px;
+}
+#adminsearchimg {
+  position: absolute;
+  background-color: rgb(227, 79, 79);
+  height: 50%;
+  top: 10%;
+  left: 3px;
+  border-radius: 20px;
+  padding: 5px;
+}
+#adminsortdiv {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding-left: 40px;
+  right: 0px;
+  border-left: 1px solid rgb(227, 79, 79);
+}
+#adminsortdiv > div {
+  display: flex;
+}
+#adminsortdiv > div > input {
+  accent-color: rgb(277, 79, 79);
+}
+#adminStudenList {
+  position: absolute;
+  padding: 10px;
+  width: 90%;
+  height: 70%;
+  top: 25%;
+  overflow-x: auto;
+  background-color: transparent;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(227, 79, 79, 0.5);
+  border-radius: 22px;
+}
+.stulistele {
+  background-color: rgba(227, 79, 79, 0.8);
+  height: 170px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sleimg1 {
+  background-color: white;
+  height: 35%;
+  border-radius: 200px;
+  position: absolute;
+  left: 25px;
+}
+.stulistelesd {
+  background-color: white;
+  height: 35%;
+  line-height: 12px;
+  width: 49%;
+  font-size: 17px;
+  padding-left: 15px;
+  padding-right: 10px;
+  position: absolute;
+  left: 190px;
+  border-radius: 20px;
+}
+.stulisteleimgsd {
+  position: absolute;
+  left: 525px;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stulisteleimgsd > img {
+  height: 30px;
+  margin: 5px;
+}
+.stulisteleimgsd > img:hover {
+  cursor: pointer;
+}
