@@ -4,14 +4,14 @@ import AddPost from './AddPost';
 import CountUp from 'react-countup'
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
-import AllPosts from './AllPosts';
+import AllPostsC from './AllPostsC';
 export default function ClientDashboard() {
 
     const [AddPostStatus,setAddPost]=useState(false);
 
     const [dashBoardData,setDashData]=useState({});
 
-    const [clientTab,setClientTab]=useState('AllPosts');
+    const [clientTab,setClientTab]=useState('AllPostCs');
 
     const Client_dashboard_api='http://localhost:8000/upwork/client/dashboard';
 
@@ -32,10 +32,9 @@ export default function ClientDashboard() {
 
     const clientTabSwitch=()=>
     {
-        console.log('okkkkkkkkkkkkk')
-        if(clientTab==='AllPosts')
+        if(clientTab==='AllPostCs')
         {
-            return(<AllPosts clientEmail={clientEmail} AddPostStatus={AddPostStatus}/>)
+            return(<AllPostsC clientEmail={clientEmail} AddPostStatus={AddPostStatus}/>)
         }
     }
 

@@ -6,6 +6,7 @@ import axios from 'axios'
 export default function Login() {
 
     const login_api="http://localhost:8000/upwork/log-in";
+    
     const Navigate=useNavigate();
     const[userData,setUserData]=useState({
         email:'',
@@ -25,12 +26,14 @@ export default function Login() {
             }
             else if(response.data.userType==='freelancer')
             {
-                Navigate('/FreelancerDashboard')
+                Navigate('/FreelancerDashboard',{state:{freelancerEmail:userData.email}})
             }
         })
         .catch((error)=>{
             console.log(error.message)
         })
+
+        
     }
 
     return (
