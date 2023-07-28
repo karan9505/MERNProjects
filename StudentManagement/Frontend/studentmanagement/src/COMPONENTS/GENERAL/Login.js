@@ -45,13 +45,13 @@ export default function Login(props) {
       <h1 className='sliderHeading' id="loginHeading"><span>Login</span></h1>
       <img src={props.loginImg} className='loginImage' alt='NotFound'></img>
       <div className='inputDataDiv' id="loginInputEmailDiv">
-        <label for="loginEmail">Email</label>
+        <label htmlFor="loginEmail">Email</label>
         <input type='text' placeholder='Email...' id="loginEmail" className='inputField' value={loginData.email} onChange={(e)=>{setLoginData({...loginData,email:e.target.value})}} onClick={(e)=>{setEmpty({})}}></input>
         <p>{emptyFields.ee}</p>
       </div>
 
       <div className='inputDataDiv' id="loginInputpassilDiv">
-        <label for="loginPass">Password</label>
+        <label htmlFor="loginPass">Password</label>
         <input type='password' placeholder='Password...' id="loginPass" className='inputField' value={loginData.password} onChange={(e)=>{setLoginData({...loginData,password:e.target.value})}} onClick={(e)=>{setEmpty({})}}></input>
         <p>{emptyFields.pe}</p>
       </div>

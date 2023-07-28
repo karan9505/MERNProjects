@@ -1,0 +1,130 @@
+.viewBackMain {
+    background-color: rgba(277, 79, 79, 0.4);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: rgba(277, 79, 79, 1);
+}
+
+.detailsBack,.detailsBack1 {
+    background-color: rgba(255, 255, 255, 255);
+    position: absolute;
+    height: 80%;
+    width: 60%;
+    top: 10%;
+    left: 20%;
+    border-radius: 20px;
+}
+.detailsBack1{
+    height: 94%;
+    top:3%;
+}
+.detailsBack>h1 {
+    position: absolute;
+    width: 100%;
+    left: 22%;
+}
+
+.closeImg {
+    position: absolute;
+    border: 1px solid rgba(277, 79, 79, 1);
+    padding: 5px;
+    height: 15px;
+    border-radius: 20px;
+    right: 10px;
+    top: 10px;
+}
+
+.closeImg:hover {
+    cursor: pointer;
+}
+
+#welshead1 {
+    letter-spacing: 15px;
+    border-bottom: 1px solid rgb(227, 79, 79);
+    text-align: center;
+    width: 62%;
+    padding-bottom: 3px;
+    font-weight: 100;
+    position: absolute;
+    top: -15px;
+    left: 19%;
+}
+#EditNameDiv
+{
+    position: absolute;
+    width: 84%;
+    left: 8%;
+    top:120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+#efn,#eln
+{
+    border: 1px solid rgb(227, 79, 79);
+    outline: none;
+    padding: 4px 4px 4px 8px;
+    font-size: 17px;
+    border-radius: 10px;
+}
+#enamehead,#emarkshead
+{
+    position: absolute;
+    top:-60px;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(227, 79, 79);
+    font-size: 20px;
+    left: 0px;
+}
+#emarkshead
+{
+    top:170px;
+    left: 74px;
+}
+.marksDiv{
+    position: absolute;
+    top:38px;
+    display: flex;
+    width: 214px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    right:2px;
+    
+}
+#marksDiv>label
+{
+    position: relative;
+    bottom: 2px;
+}
+.marksInp
+{
+    width: 60px;
+    border: 1px solid rgb(227, 79, 79);
+    outline: none;
+    color: rgb(227, 79, 79);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#md2 {
+    top: 72px;
+}
+#md3 {
+    top: 108px;
+}
+#md4 {
+    top: 144px;
+}
+#md5 {
+    top: 180px;
+}
+#marksTable1
+{
+    width: 84%;
+}

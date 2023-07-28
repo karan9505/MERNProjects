@@ -7,9 +7,9 @@ import View from './View';
 export default function AdminLogin() {
 
   const Navigate = useNavigate();
-  const [vebs,setvebs]=useState('b');
+  const [vebs, setvebs] = useState('b');
   const [studenList, setStudentList] = useState([]);
-  const [currentStudentId,setcsid] = useState('');
+  const [currentStudentId, setcsid] = useState('');
   const setStudentListFunction = () => {
     axios.post('http://localhost:8000/Admin')
       .then((response) => {
@@ -26,18 +26,22 @@ export default function AdminLogin() {
     Navigate('/');
   }
 
-  const vebsfunction=()=>{
-    if(vebs==='b')
-      return(<></>);
-    else if(vebs==='e')
-      return(<Edit/>)
-    else if(vebs==='v');
-      return(<View BackFunction={setvebs} studentId={currentStudentId}/>)   
+  const vebsfunction = () => {
+    if (vebs === 'b')
+      return (<></>);
+    else if (vebs === 'e')
+      return (<Edit />)
+    else if (vebs === 'v');
+    return (<View BackFunction={setvebs} studentId={currentStudentId} />)
   }
 
-  const switchTab=(e)=>{
-    if(e.target.id==='v'){
+  const switchTab = (e) => {
+    if (e.target.id === 'v') {
       setvebs('v');
+      setcsid(e.target.parentElement.parentElement.id)
+    }
+    else if (e.target.id === 'e') {
+      setvebs('e');
       setcsid(e.target.parentElement.parentElement.id)
     }
   }
@@ -67,11 +71,11 @@ export default function AdminLogin() {
               <p>Sort:</p>
               <div>
                 <input type='radio' id="searchAscenRadio" name="searchradio"></input>
-                <label for="searchAccenRadio">Ascending </label>
+                <label htmlFor="searchAccenRadio">Ascending </label>
               </div>
               <div>
                 <input type='radio' id="searchDecenRadio" name="searchradio"></input>
-                <label for="searchAccenRadio">Descending</label>
+                <label htmlFor="searchAccenRadio">Descending</label>
               </div>
             </div>
           </div>
@@ -92,8 +96,8 @@ export default function AdminLogin() {
                             <p>Roll No. : {data.rollNumber}  </p>
                           </div>
                           <div className='stulisteleimgsd'>
-                            <img src='../IMAGES/View.png' alt='Not' title='View' id='v' onClick={(e)=>{switchTab(e)}}></img>
-                            <img src='../IMAGES/Edit.png' alt='Not' title='Edit' value='e' onClick={(e)=>{switchTab(e)}}></img>
+                            <img src='../IMAGES/View.png' alt='Not' title='View' id='v' onClick={(e) => { switchTab(e) }}></img>
+                            <img src='../IMAGES/Edit.png' alt='Not' title='Edit' id='e' onClick={(e) => { switchTab(e) }}></img>
                             <img src='../IMAGES/Delete.png' alt='Not' title='Delete'></img>
                           </div>
                         </div>

@@ -15,7 +15,7 @@ const academicsSchema=new mongoose.Schema({
         english:{type:Number,min:0,max:100,default:0},
         finalResult:{
             total:{type:Number,max:500,default:0},
-            percentage:{type:mongoose.Decimal128,default:0.00},
+            percentage: { type: String, maxlength: 5,default:"0.00%"},
             status:{type:String,maxlength:4,default:"FAIL"}
         }
     }

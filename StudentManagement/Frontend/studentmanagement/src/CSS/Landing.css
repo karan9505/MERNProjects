@@ -254,7 +254,7 @@ input[type=radio]:hover
 }
 ::placeholder
 {
-    color: rgb(227, 79, 79);
+    color: rgba(227, 79, 79,0.5);
 }
 #signupHeading
 {

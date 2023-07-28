@@ -7,6 +7,13 @@ const admin=async(req,res)=>{
     res.end();
 }
 
+const viewStudent = async (req, res) => {
+    const dbresponse = await academics.findOne({ _id: req.body.studentId })
+    res.send(dbresponse);
+    res.end();
+}
+
 module.exports={
-    admin:admin
+    admin: admin,
+    viewStudent: viewStudent
 }
