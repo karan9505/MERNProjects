@@ -14,18 +14,23 @@ require('./databaseConnect.js');
 //=======================================================================//
 
 //API Routes imports
-//1. student Api Routes
+//1. General API Routes
+const generalRoutes=require('./ROUTES/generalRouter.js')
+//2. Student API Routes
 const studentRoutes = require('./ROUTES/studentRouter.js');
-//2. admin Api Routes
+//3. Admin API Routes
 const adminRoutes = require('./ROUTES/adminRouter.js')
 //=======================================================================//
 
 
-//Api routes
-//1. student Api Routes
+//API Routes
+//1. General API Routes
+app.use('/', generalRoutes)
+
+//2. Student API Routes
 app.use('/Student', studentRoutes)
 
-//2.Admin Api Routes
+//3.Admin API Routes
 app.use('/Admin', adminRoutes)
 //* Default API
 app.use('*', (req, res) => {
@@ -36,8 +41,9 @@ app.use('*', (req, res) => {
 
 
 //Server
-app.listen(8000, () => {
+const port=8000;
+app.listen(port, () => {
     console.log("Server Started")
-    console.log("URL : http://localhost:8000/")
+    console.log("URL : http://localhost:"+port+"/")
 })
 //=======================================================================//

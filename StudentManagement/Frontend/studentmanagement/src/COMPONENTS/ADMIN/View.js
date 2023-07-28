@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../CSS/View.css'
 export default function View(props) {
+  console.log("CSID : ",props.studentId)
   return (
     <div className='viewBackMain'>
       <div className='detailsBack'>

@@ -19,13 +19,15 @@ export default function Login(props) {
       else if(loginData.password==="")
       setEmpty({...setEmpty,pe:"Enter password !"})
       else{
-        axios.post("http://localhost:8000/Student/Login",loginData)
+        axios.post("http://localhost:8000/Login",loginData)
         .then((response)=>{
           console.log(response.data)
           if(response.data.message==="Invalid email")
             setEmpty({...setEmpty,ee:"Invalid email !"})
           else if(response.data.message==="Invalid password")
             setEmpty({...setEmpty,pe:"Invalid password !"})
+          else if(response.data.message==="Invalid usertype")
+            setEmpty({...setEmpty,ee:"Invalid usertype !"})
           else{
             if(response.data.userType===1)
               Navigate('/Admin');

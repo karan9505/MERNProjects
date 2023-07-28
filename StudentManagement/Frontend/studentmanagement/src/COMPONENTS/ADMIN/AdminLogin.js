@@ -9,7 +9,7 @@ export default function AdminLogin() {
   const Navigate = useNavigate();
   const [vebs,setvebs]=useState('b');
   const [studenList, setStudentList] = useState([]);
-
+  const [currentStudentId,setcsid] = useState('');
   const setStudentListFunction = () => {
     axios.post('http://localhost:8000/Admin')
       .then((response) => {
@@ -32,11 +32,14 @@ export default function AdminLogin() {
     else if(vebs==='e')
       return(<Edit/>)
     else if(vebs==='v');
-      return(<View BackFunction={setvebs}/>)   
+      return(<View BackFunction={setvebs} studentId={currentStudentId}/>)   
   }
 
   const switchTab=(e)=>{
-
+    if(e.target.id==='v'){
+      setvebs('v');
+      setcsid(e.target.parentElement.parentElement.id)
+    }
   }
 
   return (
@@ -80,17 +83,17 @@ export default function AdminLogin() {
                   {
                     studenList.map((data, index) => {
                       return (
-                        <div className='stulistele'>
+                        <div className='stulistele' id={data._id}>
                           <img src='../IMAGES/Student.png' alt='Not' className='sleimg1'></img>
-                          <div className='stulistelesd' key={data._id}>
+                          <div className='stulistelesd' >
                             <p>Name : {data.firstName} {data.lastName}</p>
                             <p>Class : {data.class}</p>
                             <p>Section : {data.section}</p>
                             <p>Roll No. : {data.rollNumber}  </p>
                           </div>
                           <div className='stulisteleimgsd'>
-                            <img src='../IMAGES/View.png' alt='Not' title='View' onClick={(e)=>{setvebs('v')}}></img>
-                            <img src='../IMAGES/Edit.png' alt='Not' title='Edit' onClick={(e)=>{setvebs('e')}}></img>
+                            <img src='../IMAGES/View.png' alt='Not' title='View' id='v' onClick={(e)=>{switchTab(e)}}></img>
+                            <img src='../IMAGES/Edit.png' alt='Not' title='Edit' value='e' onClick={(e)=>{switchTab(e)}}></img>
                             <img src='../IMAGES/Delete.png' alt='Not' title='Delete'></img>
                           </div>
                         </div>

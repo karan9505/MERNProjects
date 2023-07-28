@@ -24,7 +24,7 @@ export default function Signup(props) {
         else if(userData.password==="")
             setEmpty({...emptyFields,pe:"Enter password !"})
         else{
-        axios.post("http://localhost:8000/Student/Signup",userData)
+        axios.post("http://localhost:8000/Signup",userData)
         .then((response)=>{
             console.log(response.data)
             if(response.data.message==='Signup Successful')
