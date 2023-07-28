@@ -2,6 +2,8 @@ const mongoose=require('mongoose');
 
 const academicsSchema=new mongoose.Schema({
     email:{type:String,required:true,unique:true,dropDups:true},
+    firstName:{type:String,required:true},
+    lastName:{type:String,required:true},
     class:{type:Number,min:0,max:100,default:0},
     section:{type:String,maxlength: 1,default:'-'},
     rollNumber:{type:Number,min:0,default:0},

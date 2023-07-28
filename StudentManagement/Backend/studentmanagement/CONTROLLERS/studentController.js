@@ -42,7 +42,11 @@ const studentSignup=async (req,res)=>{
     if(dbResponse._id!=="")
         res.send({message:"Signup Successful"})
     if(req.body.userType===0){
-        let newAcademic=new academics({email:req.body.email});
+        let newAcademic=new academics({
+            email:req.body.email,
+            firstName:req.body.firstName,
+            lastName:req.body.lastName,
+        });
         dbResponse=await newAcademic.save();
     }
     res.end();

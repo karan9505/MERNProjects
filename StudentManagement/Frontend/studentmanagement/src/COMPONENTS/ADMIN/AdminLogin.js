@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react'
 import '../../CSS/AdminLogin.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Edit from './Edit';
+import View from './View';
 export default function AdminLogin() {
 
   const Navigate = useNavigate();
-
+  const [vebs,setvebs]=useState('b');
   const [studenList, setStudentList] = useState([]);
 
   const setStudentListFunction = () => {
@@ -23,6 +25,20 @@ export default function AdminLogin() {
   const Logout = (e) => {
     Navigate('/');
   }
+
+  const vebsfunction=()=>{
+    if(vebs==='b')
+      return(<></>);
+    else if(vebs==='e')
+      return(<Edit/>)
+    else if(vebs==='v');
+      return(<View BackFunction={setvebs}/>)   
+  }
+
+  const switchTab=(e)=>{
+
+  }
+
   return (
     <>
       <div className='appMainBack'>
@@ -40,7 +56,7 @@ export default function AdminLogin() {
           </div>
         </div>
         <div className='studentDataBack'>
-          <h1 id="welshead">Admin's Details</h1>
+          <h1 id="welshead">Admin's Section</h1>
           <div id="adminSearchDiv">
             <img src='../IMAGES/Search.png' alt='NotFound' id="adminsearchimg"></img>
             <input type='text' id="adminSearchInput" placeholder='Search...'></input>
@@ -62,20 +78,22 @@ export default function AdminLogin() {
                 <h1>Student Database is Empty</h1> :
                 <>
                   {
-                    studenList.dbResponseCred.map((data, index) => {
-                      return (<div className='stulistele'>
-                        <img src='../IMAGES/Student.png' alt='Not' className='sleimg1'></img>
-                        <div className='stulistelesd'>
-                          <p>Name : {data.firstName} {data.lastName}</p>
-                          <p>Class : {studenList.dbResponseAcad[index].class}</p>
-                          <p>Section : {studenList.dbResponseAcad[index].section}</p>
-                          <p>Roll No. : {studenList.dbResponseAcad[index].rollNumber}  </p>
+                    studenList.map((data, index) => {
+                      return (
+                        <div className='stulistele'>
+                          <img src='../IMAGES/Student.png' alt='Not' className='sleimg1'></img>
+                          <div className='stulistelesd' key={data._id}>
+                            <p>Name : {data.firstName} {data.lastName}</p>
+                            <p>Class : {data.class}</p>
+                            <p>Section : {data.section}</p>
+                            <p>Roll No. : {data.rollNumber}  </p>
+                          </div>
+                          <div className='stulisteleimgsd'>
+                            <img src='../IMAGES/View.png' alt='Not' title='View' onClick={(e)=>{setvebs('v')}}></img>
+                            <img src='../IMAGES/Edit.png' alt='Not' title='Edit' onClick={(e)=>{setvebs('e')}}></img>
+                            <img src='../IMAGES/Delete.png' alt='Not' title='Delete'></img>
+                          </div>
                         </div>
-                        <div className='stulisteleimgsd'>
-                          <img src='../IMAGES/View.png' alt='Not' title='View'></img>
-                          <img src='../IMAGES/Edit.png' alt='Not' title='Edit'></img>
-                        </div>
-                      </div>
                       )
                     })
                   }
@@ -84,6 +102,7 @@ export default function AdminLogin() {
           </div>
         </div>
       </div>
+      {vebsfunction()}
     </>
   )
 }
