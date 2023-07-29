@@ -5,7 +5,7 @@ export default function AddPost(props) {
 
     const addpost_api_key = "http://localhost:8000/upwork/client/add-job-post";
 
-    const getskills_api_key = "http://localhost:8000/upwork/admin/get-skills-byword";
+    const getskills_api_key = "http://localhost:8000/upwork/admin/get-skills-by-word";
 
     const [postData, setPostData] = useState({
         jobTitle: '',
@@ -76,6 +76,11 @@ export default function AddPost(props) {
     const skillSelect = (e) => {
         setPostData({ ...postData, jobSkills: [...postData.jobSkills, e.target.parentNode.id] })
         setSkillSet([])
+        document.getElementById('jobSkills').value=''
+    }
+
+    const removeSkills = (e) => {
+        postData.jobSkills.pop(e.target.parentElement.id)
     }
 
     return (
@@ -125,6 +130,16 @@ export default function AddPost(props) {
                                 }
                             </div>
                     }
+                    <div id="addpostskillwrap">
+                        {
+                            postData.jobSkills.map((skills, index) => {
+                                return (<div className='skillp' id={skills}>
+                                    <p >{skills}</p>
+                                    <input type='button' value={"X"} onClick={(e)=>{removeSkills(e)}}></input>
+                                </div>)
+                            })
+                        }
+                    </div>
                 </div>
 
                 <div id="jobTermdiv" className='PostDiv'>

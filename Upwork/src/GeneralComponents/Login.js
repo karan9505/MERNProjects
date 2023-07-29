@@ -26,7 +26,7 @@ export default function Login() {
             }
             else if(response.data.userType==='freelancer')
             {
-                Navigate('/FreelancerDashboard',{state:{freelancerEmail:userData.email}})
+                Navigate('/FreelancerDashboard', {state: { freelancerEmail: userData.email }})
             }
         })
         .catch((error)=>{
@@ -54,7 +54,7 @@ export default function Login() {
                 <img src='../IMAGES/Apple.png' id="LPAimg" alt="Not Found"></img>
                 <p id="LPTL2">Don't have an Upwork account?</p>
             </div>
-            <input type='button' id="LPSButon" value="Sign Up"></input>
+            <input type='button' id="LPSButon" value="Sign Up" onClick={(e)=>{Navigate('/Usertype')}}></input>
         </div>
         <div id="LPBlack"><p>&#169;2015 - 2023 Upwork Global Inc. Privacy Policy</p></div>
         <div id="LPLastDiv"></div>

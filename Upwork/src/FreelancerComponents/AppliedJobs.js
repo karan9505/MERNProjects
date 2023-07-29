@@ -1,42 +1,49 @@
+import React from 'react'
 import axios from 'axios';
-import React, { useEffect } from 'react'
-import { useState } from 'react';
-import '../CSS/ClientDashboard.css'
-export default function AllPostsC(props) {
+import { useState, useEffect } from 'react';
 
-    const [allClientPosts, setClientPosts] = useState('');
+export default function AppliedJobs(props) {
+    const [allPost, setAllPost] = useState({});
+    const my_feed_api = " http://localhost:8000/upwork/freelancer/my-applied-jobs";
 
-    const all_client_post_api = 'http://localhost:8000/upwork/client/get-my-job-post';
-
-    useEffect(() => {
-        axios.post(all_client_post_api, { email: props.clientEmail })
+    const getAllPosts = () => {
+        console.log("In all applied posts")
+        console.log(props.FreelancerID)
+        axios.post(my_feed_api, {
+            freelancerid: props.FreelancerID
+        })
             .then((response) => {
-                console.log(response.data)
-                setClientPosts(response.data)
+                console.log("AL------",response.data)
+                setAllPost(response.data)
             })
             .catch((error) => {
                 console.log(error.message)
             })
-    }, [props.AddPostStatus])
+    }
+
+    useEffect(() => {
+        getAllPosts();
+    }, [])
+
     return (
         <div>
             {
-                allClientPosts.length>0?
+                allPost.length>0 ?
                     <>
                         {
-                            allClientPosts.map((posts, index) => {
+                            allPost.map((posts, index) => {
                                 return (
                                     <div id={posts.jobPostId} key={posts.jobPostId} className='jobPostDiv'>
                                         <p className='postDate'>{posts.date.slice(8, 10) + '-' + posts.date.slice(5, 7) + '-' + posts.date.slice(0, 4)}</p>
                                         <p className='postHeadP'>Title</p>
-                                        <p className='postBodyP'>{posts.jobTitle}</p>
+                                        <p className='postBodyP'>{posts.titel}</p>
                                         <p className='postHeadP'>Description</p>
-                                        <p className='postBodyP'>{posts.jobDescription}</p>
+                                        <p className='postBodyP'>{posts.discription}</p>
                                         <p className='postHeadP'>Skills required</p>
                                         <div className='skillwrap'>
                                             {
-                                                posts.skillTags.map((skill, index) => {
-                                                    return (<p className='skillp'>{skill.skills}</p>)
+                                                posts.skills.map((skill, index) => {
+                                                    return (<p className='skillp'>{skill}</p>)
                                                 })
                                             }
                                         </div>
@@ -56,7 +63,7 @@ export default function AllPostsC(props) {
                             })
                         }
                     </> :
-                    <><h1>All Post Empty</h1></>
+                    <><h1>Applied Post Empty</h1></>
             }
         </div>
     )

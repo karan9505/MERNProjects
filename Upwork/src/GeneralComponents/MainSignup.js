@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../CSS/MainSignup.css'
 import axios from 'axios'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 export default function MainSignup(props) {
     const Location=useLocation();
     let signup_api;
@@ -23,12 +23,16 @@ export default function MainSignup(props) {
         userType:Location.state.userType
     });
 
+    const Navigate = useNavigate();
+
     const sigupUser=()=>
     {
         console.log(userData)
         axios.post(signup_api,userData)
-        .then((resp)=>{
-            console.log(resp.data,'ok')
+            .then((resp) => {
+            console.log(resp.data)
+            if (resp.data.message === "user added")
+                Navigate('/Login')
         })
         .catch((err)=>{
             console.log(err.message)

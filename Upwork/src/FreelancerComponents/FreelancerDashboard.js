@@ -4,11 +4,14 @@ import CountUp from 'react-countup'
 import axios from 'axios'
 import { useLocation } from 'react-router-dom'
 import AllPostsF from './AllPostsF'
+import AppliedJobs from './AppliedJobs'
 export default function ClientDashboard() {
     
     const Location=useLocation();
     
-    const freelancer_dashboard="http://localhost:8000/upwork/freelancer/dashboard";
+    const freelancer_dashboard = "http://localhost:8000/upwork/freelancer/dashboard";
+    
+    const [freelancerDbData, freelancerDbDataSet] = useState({});
 
     const [freeTab,setFreeTab]=useState('All');
 
@@ -20,6 +23,7 @@ export default function ClientDashboard() {
         })
         .then((response)=>{
             console.log(response.data)
+            freelancerDbDataSet(response.data)
         })
         .catch((error)=>{
             console.log(error.message)
@@ -30,12 +34,13 @@ export default function ClientDashboard() {
     
     useEffect(()=>{
         getDashBoardData();
-    },[])
+    }, [freeTab])
 
     const freeLancerTabSwitch=()=>{
-        if(freeTab==='All'){
-            return(<AllPostsF/>)
-        }
+        if(freeTab==='All')
+            return (<AllPostsF FreelancerID={freelancerDbData.freelancerId}/>)
+        else if (freeTab === 'Applied')
+            return (<AppliedJobs FreelancerID={freelancerDbData.freelancerId} />)
     }
 
     return (
@@ -69,28 +74,32 @@ export default function ClientDashboard() {
             </div>
             <div id="FLBoard">
                 <div id="FLAlalytics">
-                    <div id="" className='FLAData'>
+                    <div id="" className='FLAData' onClick={(e) => { setFreeTab("All") }}>
                         <h1>
-                            <CountUp start={0} end={100} duration={2}></CountUp>+
+                            <CountUp start={0} end={freelancerDbData.allPostCount
+} duration={2}></CountUp>+
                         </h1>
                         <p>Posts</p>
                     </div>
-                    <div id="" className='CDAData'>
+                    <div id="" className='CDAData' onClick={(e)=>{setFreeTab("Applied")}}>
                         <h1>
-                            <CountUp start={0} end={100} duration={2}></CountUp>+
+                            <CountUp start={0} end={freelancerDbData.jobProposalCount} duration={2}></CountUp>+
                         </h1>
-                        <p>On going projects</p>
+                        <p>Applied</p>
                     </div>
                     <div id="" className='CDAData'>
                         <h1>
-                            <CountUp start={0} end={100} duration={2}></CountUp>+
+                            <CountUp start={0} end={freelancerDbData.completeProjectCount
+} duration={2}></CountUp>+
                         </h1>
                         <p>Completed projects</p>
                     </div>
                     <div id="" className='CDAData'>
                         <h1>
-                            Account<br></br>Billing
+                            <CountUp start={0} end={freelancerDbData.incompleteProjectCount
+} duration={2}></CountUp>+
                         </h1>
+                        <p>Ongoing projects</p>
                     </div>
                 </div>
                 <div id="FLPost">

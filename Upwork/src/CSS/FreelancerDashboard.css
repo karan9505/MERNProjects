@@ -109,6 +109,7 @@
 
 ::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -131,11 +132,13 @@
     font-size: 16px;
     text-align: justify;
     color: rgba(0, 108, 0, 0.7);
+
 }
 
 .postHeadP>span {
-    border-bottom: op;
+    border-bottom:0px;
 }
+
 
 .postDate {
     font-size: 12px;
@@ -172,5 +175,25 @@
 
 .edpsd>p>span {
     position: relative;
-    top: 2px;
+    top: 1px;
+}
+.skillwrap
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+    padding: 0px;
+    position: relative;
+    right: 8px;
+}
+.skillp{
+    background-color: rgba(0, 108, 0, 0.4);
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 20px;
+    color: rgba(0, 108, 0, 1);
+}
+.skillwrap::-webkit-scrollbar-track {
+    background: rgba(0, 108, 0, 0);
 }
