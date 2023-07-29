@@ -20,7 +20,7 @@ export default function AdminLogin() {
 
   useEffect(() => {
     setStudentListFunction();
-  }, [])
+  }, [vebs])
 
   const Logout = (e) => {
     Navigate('/');
@@ -30,7 +30,7 @@ export default function AdminLogin() {
     if (vebs === 'b')
       return (<></>);
     else if (vebs === 'e')
-      return (<Edit />)
+      return (<Edit BackFunction={setvebs} studentId={currentStudentId} />)
     else if (vebs === 'v');
     return (<View BackFunction={setvebs} studentId={currentStudentId} />)
   }

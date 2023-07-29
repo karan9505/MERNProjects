@@ -1,21 +1,49 @@
 import React from 'react'
+import { useEffect,useState } from 'react';
+import axios from 'axios';
+export default function Edit(props) {
 
-export default function Edit() {
+  const [result, setResult] = useState({});
+  const [finalResult, setFinalRes] = useState({});
+  const [studentData, setStudentdat] = useState({});
+  const getSpecificStudent = () => {
+    axios.post('http://localhost:8000/Admin/ViewStudent', { studentId: props.studentId })
+      .then((response) => {
+        setStudentdat(response.data)
+        setResult(response.data.result)
+        setFinalRes(response.data.result.finalResult)
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error.message)
+      })
+  }
+
+  useEffect(() => {
+    getSpecificStudent();
+  }, [])
+
+  const Back = (e) => {
+    props.BackFunction('b');
+  }
   return (
     <div>
+      {
+        console.log("MY RESULT : ",result)
+      }
       <div className='viewBackMain'>
         <div className='detailsBack1'>
-          <img src='../IMAGES/Close.png' alt="Not" className='closeImg'></img>
+          <img src='../IMAGES/Close.png' alt="Not" className='closeImg' onClick={(e)=>{Back(e)}}></img>
           <h1 id="welshead1">Student's Data Edit</h1>
           <div id="EditNameDiv">
             <p id="enamehead">NAME</p>
             <div>
               <label htmlFor='efn'>First Name : </label>
-              <input type='text' id="efn" placeholder='Firstname...'></input>
+              <input type='text' id="efn" placeholder='Firstname...' value={studentData.firstName} onChange={(e)=>{setStudentdat({...studentData,firstName:e.target.value})}}></input>
             </div>
             <div>
               <label htmlFor='eln'>Last Name : </label>
-              <input type='text' id="eln" placeholder='Lastname...'></input>
+              <input type='text' id="eln" placeholder='Lastname...' value={studentData.lastName} onChange={(e) => { setStudentdat({ ...studentData, lastName: e.target.value })}}></input>
             </div> 
           </div>
           <div id="marksDiv">
@@ -32,7 +60,7 @@ export default function Edit() {
                 <td>
                   <div className="marksDiv" id="md1">
                     <label htmlFor='mmarks'>Enter marks :</label>
-                    <input type='number' id="mmarks" className='marksInp'></input>
+                    <input type='number' id="mmarks" className='marksInp' value={result.maths} onChange={(e) => {setResult({ ...result, maths:e.target.value})}}></input>
                   </div>  
                 </td>
               </tr>
@@ -42,7 +70,7 @@ export default function Edit() {
                 <td>
                   <div className="marksDiv" id="md2">
                     <label htmlFor='mmarks'>Enter marks :</label>
-                    <input type='number' id="mmarks" className='marksInp'></input>
+                    <input type='number' id="mmarks" className='marksInp' onChange={(e) => { setResult({ ...result, physics: e.target.value }) }}></input>
                   </div>
                 </td>
               </tr>
@@ -78,8 +106,20 @@ export default function Edit() {
               </tr>
             </table>
           </div>
-          <div>
-            <h1>swds</h1>
+          <div id="editExtraDetails">
+            <p id="enamehead">OTHERS</p>
+            <div>
+              <label htmlFor='editnc'>CLASS : </label>
+              <input type='number' placeholder='Class' id="editnc"></input>
+            </div>
+            <div>
+              <label htmlFor='editns'>SECTION : </label>
+              <input type='number' placeholder='Class' id="editns"></input>
+            </div>
+            <div>
+              <label htmlFor='editnr'>ROLL No. : </label>
+              <input type='number' placeholder='Class' id="editnr"></input>
+            </div>
           </div>
         </div>
       </div>

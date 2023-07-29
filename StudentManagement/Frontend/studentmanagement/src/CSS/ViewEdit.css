@@ -6,7 +6,8 @@
     color: rgba(277, 79, 79, 1);
 }
 
-.detailsBack,.detailsBack1 {
+.detailsBack,
+.detailsBack1 {
     background-color: rgba(255, 255, 255, 255);
     position: absolute;
     height: 80%;
@@ -15,10 +16,12 @@
     left: 20%;
     border-radius: 20px;
 }
-.detailsBack1{
+
+.detailsBack1 {
     height: 94%;
-    top:3%;
+    top: 3%;
 }
+
 .detailsBack>h1 {
     position: absolute;
     width: 100%;
@@ -50,81 +53,122 @@
     top: -15px;
     left: 19%;
 }
-#EditNameDiv
-{
+
+#EditNameDiv {
     position: absolute;
     width: 84%;
     left: 8%;
-    top:120px;
+    top: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 20px;
+    
 }
-#efn,#eln
-{
+
+#efn,
+#eln {
     border: 1px solid rgb(227, 79, 79);
     outline: none;
     padding: 4px 4px 4px 8px;
     font-size: 17px;
     border-radius: 10px;
+    color: rgb(227, 79, 79);
 }
-#enamehead,#emarkshead
-{
+
+#enamehead,
+#emarkshead {
     position: absolute;
-    top:-60px;
+    top: -60px;
     font-weight: 600;
     border-bottom: 1px solid rgb(227, 79, 79);
     font-size: 20px;
     left: 0px;
 }
-#emarkshead
-{
-    top:170px;
+
+#emarkshead {
+    top: 170px;
     left: 74px;
 }
-.marksDiv{
+
+.marksDiv {
     position: absolute;
-    top:38px;
+    top: 38px;
     display: flex;
     width: 214px;
     height: 31px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    right:2px;
-    
+    right: 2px;
+
 }
-#marksDiv>label
-{
+
+#marksDiv>label {
     position: relative;
     bottom: 2px;
 }
-.marksInp
-{
+
+.marksInp {
     width: 60px;
     border: 1px solid rgb(227, 79, 79);
     outline: none;
     color: rgb(227, 79, 79);
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 #md2 {
     top: 72px;
 }
+
 #md3 {
     top: 108px;
 }
+
 #md4 {
     top: 144px;
 }
+
 #md5 {
     top: 180px;
 }
-#marksTable1
-{
+
+#marksTable1 {
     width: 84%;
+}
+
+#editExtraDetails {
+    position: absolute;
+    width: 84%;
+    left: 8%;
+    top: 525px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+#editExtraDetails>div {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#editExtraDetails>div>input {
+    width: 50px;
+    border: 1px solid rgb(227, 79, 79);
+    outline: none;
+    padding: 4px 4px 4px 8px;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+    color: rgb(227, 79, 79);
 }

@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import '../../CSS/ViewEdit.css'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
 export default function View(props) {
   console.log("CSID : ", props.studentId)
 
-  const Navigate = useNavigate();
   const [studentData, setStudentdat] = useState({});
   const getSpecificStudent = () => {
     axios.post('http://localhost:8000/Admin/ViewStudent', { studentId: props.studentId })
@@ -24,7 +22,6 @@ export default function View(props) {
 
   const Back = (e) => {
     props.BackFunction('b');
-    Navigate('/Admin')
   }
 
   return (

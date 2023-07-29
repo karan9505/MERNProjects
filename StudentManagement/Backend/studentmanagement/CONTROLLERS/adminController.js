@@ -4,6 +4,7 @@ const academics=require('../MODELS/academic.js');
 const admin=async(req,res)=>{
     const dbResponseAcad=await academics.find({});
     res.send(dbResponseAcad)
+    console.log("ALL STUDENTS")
     res.end();
 }
 
