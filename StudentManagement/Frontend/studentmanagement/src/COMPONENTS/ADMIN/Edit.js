@@ -4,14 +4,12 @@ import axios from 'axios';
 export default function Edit(props) {
 
   const [result, setResult] = useState({});
-  const [finalResult, setFinalRes] = useState({});
   const [studentData, setStudentdat] = useState({});
   const getSpecificStudent = () => {
     axios.post('http://localhost:8000/Admin/ViewStudent', { studentId: props.studentId })
       .then((response) => {
         setStudentdat(response.data)
         setResult(response.data.result)
-        setFinalRes(response.data.result.finalResult)
         console.log(response.data);
       })
       .catch((error) => {
@@ -26,11 +24,20 @@ export default function Edit(props) {
   const Back = (e) => {
     props.BackFunction('b');
   }
+
+  const sendUpdate = () => {
+    studentData.result = result;
+    axios.post('http://localhost:8000/Admin/UpdateStudent', studentData)
+      .then((response) => {
+      console.log(response.data)
+      })
+      .catch((error) => {
+        console.log(error.message)
+      })
+  }
+
   return (
     <div>
-      {
-        console.log("MY RESULT : ",result)
-      }
       <div className='viewBackMain'>
         <div className='detailsBack1'>
           <img src='../IMAGES/Close.png' alt="Not" className='closeImg' onClick={(e)=>{Back(e)}}></img>
@@ -60,7 +67,7 @@ export default function Edit(props) {
                 <td>
                   <div className="marksDiv" id="md1">
                     <label htmlFor='mmarks'>Enter marks :</label>
-                    <input type='number' id="mmarks" className='marksInp' value={result.maths} onChange={(e) => {setResult({ ...result, maths:e.target.value})}}></input>
+                    <input type='number' id="mmarks" className='marksInp' value={result.maths} onChange={(e) => {setResult({ ...result, maths:Number(e.target.value)})}}></input>
                   </div>  
                 </td>
               </tr>
@@ -70,7 +77,7 @@ export default function Edit(props) {
                 <td>
                   <div className="marksDiv" id="md2">
                     <label htmlFor='mmarks'>Enter marks :</label>
-                    <input type='number' id="mmarks" className='marksInp' onChange={(e) => { setResult({ ...result, physics: e.target.value }) }}></input>
+                    <input type='number' id="pmarks" className='marksInp' value={result.physics} onChange={(e) => { setResult({ ...result, physics: Number(e.target.value )}) }}></input>
                   </div>
                 </td>
               </tr>
@@ -80,7 +87,7 @@ export default function Edit(props) {
                 <td>
                   <div className="marksDiv" id="md3">
                     <label htmlFor='mmarks'>Enter marks :</label>
-                    <input type='number' id="mmarks" className='marksInp'></input>
+                    <input type='number' id="cmarks" className='marksInp' value={result.chemistry} onChange={(e) => { setResult({ ...result, chemistry:Number(e.target.value)}) }}></input>
                   </div>
                 </td>
               </tr>
@@ -90,7 +97,7 @@ export default function Edit(props) {
                 <td>
                   <div className="marksDiv" id="md4">
                     <label htmlFor='mmarks'>Enter marks :</label>
-                    <input type='number' id="mmarks" className='marksInp'></input>
+                    <input type='number' id="cmarks" className='marksInp' value={result.computer} onChange={(e) => { setResult({ ...result, computer: e.target.value }) }}></input>
                   </div>
                 </td>
               </tr>
@@ -100,7 +107,7 @@ export default function Edit(props) {
                 <td>
                   <div className="marksDiv" id="md5">
                     <label htmlFor='mmarks'>Enter marks :</label>
-                    <input type='number' id="mmarks" className='marksInp'></input>
+                    <input type='number' id="emarks" className='marksInp' value={result.english} onChange={(e) => { setResult({ ...result, english: e.target.value }) }}></input>
                   </div>
                 </td>
               </tr>
@@ -110,17 +117,18 @@ export default function Edit(props) {
             <p id="enamehead">OTHERS</p>
             <div>
               <label htmlFor='editnc'>CLASS : </label>
-              <input type='number' placeholder='Class' id="editnc"></input>
+              <input type='number' placeholder='Class' id="editnc" value={studentData.class} onChange={(e) => { setStudentdat({ ...studentData, class: e.target.value }) }}></input>
             </div>
             <div>
               <label htmlFor='editns'>SECTION : </label>
-              <input type='number' placeholder='Class' id="editns"></input>
+              <input type='number' placeholder='Class' id="editns" value={studentData.section} onChange={(e) => { setStudentdat({ ...studentData, section: e.target.value }) }}></input>
             </div>
             <div>
               <label htmlFor='editnr'>ROLL No. : </label>
-              <input type='number' placeholder='Class' id="editnr"></input>
+              <input type='number' placeholder='Class' id="editnr" value={studentData.rollNumber} onChange={(e) => { setStudentdat({ ...studentData, rollNumber: e.target.value }) }}></input>
             </div>
           </div>
+          <input type='button' value={"SAVE"} onClick={(e)=>{sendUpdate(e)}}></input>
         </div>
       </div>
     </div>

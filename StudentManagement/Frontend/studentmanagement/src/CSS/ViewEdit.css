@@ -114,6 +114,7 @@
     border: 1px solid rgb(227, 79, 79);
     outline: none;
     color: rgb(227, 79, 79);
+    text-align: center;
 }
 
 input::-webkit-outer-spin-button,
