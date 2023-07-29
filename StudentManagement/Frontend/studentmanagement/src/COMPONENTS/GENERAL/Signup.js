@@ -29,7 +29,7 @@ export default function Signup(props) {
             console.log(response.data)
             if(response.data.message==='Signup Successful')
                 props.loginSignupTogggel(prev=>!prev)
-            else if(response.data.message==='User already exist')
+            else if(response.data.message==='student already exist')
                 setEmpty({...emptyFields,ee:"Email already in use !"});
         })
         .catch((error)=>{

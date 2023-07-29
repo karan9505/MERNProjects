@@ -6,7 +6,7 @@ export default function View(props) {
 
   const [studentData, setStudentdat] = useState({});
   const getSpecificStudent = () => {
-    axios.post('http://localhost:8000/Admin/ViewStudent', { studentId: props.studentId })
+    axios.post('http://localhost:8000/Admin/ViewStudent', { semail: props.semail })
       .then((response) => {
         setStudentdat(response.data)
         console.log(response.data);
@@ -49,27 +49,27 @@ export default function View(props) {
                   <tr>
                     <td>1.</td>
                     <td>Maths</td>
-                    <td>{studentData.result.maths}</td>
+                    <td>{studentData.result.maths + '-' + studentData.result.mstatus}</td>
                   </tr>
                   <tr>
                     <td>2.</td>
                     <td>Physics</td>
-                    <td>{studentData.result.physics}</td>
+                    <td>{studentData.result.physics + '-' + studentData.result.pstatus}</td>
                   </tr>
                   <tr>
                     <td>3.</td>
                     <td>Chemistry</td>
-                    <td>{studentData.result.chemistry}</td>
+                    <td>{studentData.result.chemistry + '-' + studentData.result.cstatus}</td>
                   </tr>
                   <tr>
                     <td>4.</td>
                     <td>Computer</td>
-                    <td>{studentData.result.computer}</td>
+                    <td>{studentData.result.computer + '-' + studentData.result.costatus}</td>
                   </tr>
                   <tr>
                     <td>5.</td>
                     <td>English</td>
-                    <td>{studentData.result.english}</td>
+                    <td>{studentData.result.english + '-' + studentData.result.estatus}</td>
                   </tr>
                 </table>
               </div>
