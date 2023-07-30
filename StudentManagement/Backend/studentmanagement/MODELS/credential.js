@@ -9,7 +9,9 @@ const credentialSchema=new mongoose.Schema({
 
     password:{type:String,required:true},
 
-    userType:{type:Number,min:0,max:1}
+    userType: { type: Number, min: 0, max: 1 },
+    
+    image:{type:String}
 })
 
 module.exports=mongoose.model('credential',credentialSchema);

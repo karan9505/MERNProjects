@@ -9,12 +9,14 @@ const admin=async(req,res)=>{
 }
 
 const viewStudent = async (req, res) => {
+    console.log("VIEW API",req.body)
     const dbresponse = await academics.findOne({ email: req.body.semail })
     res.send(dbresponse);
     res.end();
 }
 
 const getStudent = async (req, res) => {
+    
     const dbresponse = await academics.findOne({ email: req.body.semail })
     let resBody = JSON.parse(JSON.stringify(dbresponse.result));
     resBody.firstName = dbresponse.firstName;
@@ -61,7 +63,7 @@ const updateStudent = async (req, res) => {
             estatus: req.body.estatus,
             finalResult: {
                 total: total,
-                percentage: total/5,
+                percentage: String(total/5)+"%",
                 status: mainResult
             }
         }

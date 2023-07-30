@@ -21,7 +21,6 @@ export default function Login(props) {
       else{
         axios.post("http://localhost:8000/Login",loginData)
         .then((response)=>{
-          console.log(response.data)
           if(response.data.message==="Invalid email")
             setEmpty({...setEmpty,ee:"Invalid email !"})
           else if(response.data.message==="Invalid password")
@@ -32,7 +31,7 @@ export default function Login(props) {
             if(response.data.userType===1)
               Navigate('/Admin');
             else if(response.data.userType===0)
-              Navigate('/Student',{state:{studentDetails:response.data}});
+              Navigate('/Student',{state:{email:response.data.email}});
           }
         })
         .catch((error)=>{
