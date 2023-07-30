@@ -4,19 +4,22 @@ import axios from 'axios';
 import '../CSS/FreelancerDashboard.css'
 export default function AllPostsF(props) {
 
-    const [allPost, setAllPost] = useState('');
+    console.log("ALL POST : ",props)
+
+    const [allPost, setAllPost] = useState([]);
     const my_feed_api = " http://localhost:8000/upwork/freelancer/get-freelancer-feed";
 
     const getAllPosts = () => {
-        console.log("In all posts")
-        axios.post(my_feed_api, {})
-            .then((response) => {
-                console.log(response.data)
-                setAllPost(response.data)
-            })
-            .catch((error) => {
-                console.log(error.message)
-            })
+            console.log("MAIL MAIL :")
+            axios.post(my_feed_api, { email: props.email })
+                .then((response) => {
+                    console.log("DEFAULT POSTS : ", response.data)
+                    props.getDashBoardData();
+                    setAllPost(response.data)
+                })
+                .catch((error) => {
+                    console.log(error.message)
+                })
     }
 
     useEffect(() => {
@@ -43,7 +46,7 @@ export default function AllPostsF(props) {
     return (
         <div>
             {
-                allPost.length ?
+                allPost.length>0 ?
                     <>
                         {
                             allPost.map((posts, index) => {

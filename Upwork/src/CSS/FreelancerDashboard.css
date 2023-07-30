@@ -186,6 +186,7 @@
     padding: 0px;
     position: relative;
     right: 8px;
+    scroll-behavior: smooth;
 }
 .skillp{
     background-color: rgba(0, 108, 0, 0.4);

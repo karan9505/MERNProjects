@@ -1,59 +1,58 @@
-#CDNavbar
-{
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+#CDNavbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     position: absolute;
     height: 60px;
     width: 100%;
     left: 0px;
 }
-#CDNavbar1
-{
+
+#CDNavbar1 {
     display: flex;
     align-items: center;
     position: absolute;
-    left:140px;
+    left: 140px;
     font-size: 14px;
     width: 390px;
     justify-content: space-between;
     font-weight: 500;
-    top:7px;
+    top: 7px;
 }
-.CDNavbar11
-{
+
+.CDNavbar11 {
     display: flex;
     align-items: center;
 }
-.CDDownArrow
-{
+
+.CDDownArrow {
     height: 10px;
     margin-left: 5px;
     transition: 0.2s;
 }
-#CDNavbar2
-{
+
+#CDNavbar2 {
     height: 36px;
     width: 340px;
     border: 2px solid rgb(228, 235, 228);
     position: absolute;
     left: 983px;
-    top:9px;
+    top: 9px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
 }
-.CDNavbar11:hover>.CDDownArrow
-{
+
+.CDNavbar11:hover>.CDDownArrow {
     transform: rotateZ(180deg);
 }
-#CDNavbar21
-{
+
+#CDNavbar21 {
     position: absolute;
     height: 100%;
     display: flex;
     width: 245px;
     border-radius: 20px;
 }
-.CDNavSearch
-{
+
+.CDNavSearch {
     border-radius: 20px;
     height: 34px;
     position: absolute;
@@ -65,44 +64,46 @@
     border: none;
     outline: none;
 }
-#CDNavSearch
-{
+
+#CDNavSearch {
     position: absolute;
     height: 20px;
-    top:8px;
-    left:13px;
+    top: 8px;
+    left: 13px;
     z-index: 2;
-    
+
 }
-#CDTalentButton
-{
+
+#CDTalentButton {
     position: absolute;
-    left:242px;
+    left: 242px;
     border: none;
     height: 100%;
     width: 98px;
     border-radius: 20px;
     background-color: transparent;
 }
-#CDNavbar2:hover
-{
+
+#CDNavbar2:hover {
     background-color: rgb(228, 235, 228);
 }
-.CDNavSearch:hover,#CDTalentButton:hover
-{
+
+.CDNavSearch:hover,
+#CDTalentButton:hover {
     background-color: rgb(247, 250, 247);
 }
-#ClientBoard
-{
+
+#ClientBoard {
     position: absolute;
     width: 100%;
     height: 691px;
-    background-color: rgb(232,247,232);
-    top:69px;
+    background-color: rgb(232, 247, 232);
+    top: 69px;
     left: 0px;
 }
-#ClientAlalytics,#ClientProfile
-{
+
+#ClientAlalytics,
+#ClientProfile {
     background-color: white;
     height: 92%;
     width: 18%;
@@ -110,73 +111,73 @@
     left: 2%;
     top: 4%;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(16,138,0,0.3);
+    box-shadow: 0px 0px 10px rgba(16, 138, 0, 0.3);
 }
-#ClientProfile
-{
+
+#ClientProfile {
     left: 80%;
 }
-#ClientPost
-{
+
+#ClientPost {
     position: absolute;
     height: 92%;
     position: absolute;
-    top:4%;
+    top: 4%;
     left: 22%;
     width: 56%;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(16,138,0,0.3);
+    box-shadow: 0px 0px 10px rgba(16, 138, 0, 0.3);
 }
-#ClientAlalytics
-{
+
+#ClientAlalytics {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     color: white;
 }
-.CDAData
-{
-    background-color: rgba(0,108,0,1);
+
+.CDAData {
+    background-color: rgba(0, 108, 0, 1);
     height: 120px;
     width: 80%;
     border-radius: 10px;
     transition: 0.1s;
 }
-.CDAData:hover
-{
+
+.CDAData:hover {
     cursor: pointer;
-    background-color: rgba(10,138,0,1);
-    box-shadow: 0px 0px 5px rgba(16,138,0,3);
+    background-color: rgba(10, 138, 0, 1);
+    box-shadow: 0px 0px 5px rgba(16, 138, 0, 3);
     border: 2px solid beige;
 }
-#ClientAlalytics>div>h1
-{
+
+#ClientAlalytics>div>h1 {
     position: absolute;
     left: 50px;
     font-size: 36px;
     margin-top: 20px;
 }
-#ClientAlalytics>div>p
-{
+
+#ClientAlalytics>div>p {
     position: absolute;
     left: 50px;
-    margin-top:60px;
+    margin-top: 60px;
     font-size: 20px;
 }
-.ClientSearchDiv
-{
+
+.ClientSearchDiv {
     position: absolute;
     width: 96%;
     left: 2%;
-    top:16px;
+    top: 16px;
     display: flex;
     height: 40px;
     align-items: center;
 }
-#ClientSearchText
-{
+
+#ClientSearchText {
     position: absolute;
     height: 40%;
     outline: none;
@@ -186,46 +187,128 @@
     padding-right: 20px;
     border-radius: 20px;
     font-size: 17px;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     left: 50px;
     width: 500px;
 }
-#AddPostButton
-{
+
+#AddPostButton {
     position: absolute;
     height: 90%;
     right: 50px;
     outline: none;
     border: none;
-    background-color: rgba(13,138,0,0.8);
-    color:white;
+    background-color: rgba(13, 138, 0, 0.8);
+    color: white;
     width: 150px;
     border-radius: 20px;
     font-size: 20px;
 }
-#AddPostButton:hover
-{
-    background-color: rgba(13,138,0,1);
+
+#AddPostButton:hover {
+    background-color: rgba(13, 138, 0, 1);
     cursor: pointer;
 }
-#ClientPostsBack
-{
+
+#ClientPostsBack {
     position: absolute;
     /* background-color: aqua; */
     width: 90%;
     left: 5%;
-    top:11%;
+    top: 11%;
     height: 85%;
     overflow-y: scroll;
 }
-#ClientPostsBack::-webkit-scrollbar
-{
-    width: 0px;
+
+#ClientPostsBack::-webkit-scrollbar {
+    width: 5px;
 }
-.jobPostDiv
-{
-    border-bottom:1px solid rgba(0,108,0,0.2);
+
+.jobPostDiv {
+    border-bottom: 1px solid rgba(0, 108, 0, 0.2);
     padding: 20px;
     /* background-color: aqua; */
     margin-right: 5px;
+}
+
+.applicantButton {
+    background-color: rgba(0, 108, 0, 0.8);
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    border: none;
+    outline: none;
+    padding: 5px 15px 5px 15px;
+    margin: 20px 0px 10px 310px;
+    border-radius: 20px;
+}
+
+.applicantButton:hover {
+    cursor: pointer;
+}
+
+.viewapplicantsback {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 108, 0, 0.3);
+    position: fixed;
+    z-index: 4;
+}
+
+.applicantscroll {
+    position: absolute;
+    height: 90%;
+    width: 60%;
+    top: 5%;
+    left: 20%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#closeview {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 25px;
+}
+
+#closeview:hover {
+    cursor: pointer;
+}
+
+#viewApplicantHeading {
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    top: -2%;
+    z-index: 2;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+#applcantcrolldiv {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    height: 80%;
+    top: 15%;
+    /* background-color: aqua; */
+}
+.hirebuttonfinal
+{
+    background-color: rgba(0, 108, 0, 2);
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 5px 25px 5px 25px;
+    margin:30px 0px 10px 320px;
+    border-radius: 20px;
 }

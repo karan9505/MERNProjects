@@ -29,7 +29,7 @@ export default function AddPost(props) {
     }
 
     const jobCategoryFun = (e) => {
-        if(e.target.value!=="Select your domain")
+        if (e.target.value !== "Select your domain")
             setPostData({ ...postData, jobCategory: e.target.value })
     }
 
@@ -76,7 +76,7 @@ export default function AddPost(props) {
     const skillSelect = (e) => {
         setPostData({ ...postData, jobSkills: [...postData.jobSkills, e.target.parentNode.id] })
         setSkillSet([])
-        document.getElementById('jobSkills').value=''
+        document.getElementById('jobSkills').value = ''
     }
 
     const removeSkills = (e) => {
@@ -135,7 +135,7 @@ export default function AddPost(props) {
                             postData.jobSkills.map((skills, index) => {
                                 return (<div className='skillp' id={skills}>
                                     <p >{skills}</p>
-                                    <input type='button' value={"X"} onClick={(e)=>{removeSkills(e)}}></input>
+                                    <input type='button' value={"X"} onClick={(e) => { removeSkills(e) }}></input>
                                 </div>)
                             })
                         }

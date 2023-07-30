@@ -13,7 +13,7 @@ export default function AppliedJobs(props) {
             freelancerid: props.FreelancerID
         })
             .then((response) => {
-                console.log("AL------",response.data)
+                console.log("AL------", response.data)
                 setAllPost(response.data)
             })
             .catch((error) => {
@@ -28,7 +28,7 @@ export default function AppliedJobs(props) {
     return (
         <div>
             {
-                allPost.length>0 ?
+                allPost.length > 0 ?
                     <>
                         {
                             allPost.map((posts, index) => {

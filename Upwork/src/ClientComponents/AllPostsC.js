@@ -8,6 +8,7 @@ export default function AllPostsC(props) {
 
     const all_client_post_api = 'http://localhost:8000/upwork/client/get-my-job-post';
 
+
     useEffect(() => {
         axios.post(all_client_post_api, { email: props.clientEmail })
             .then((response) => {
@@ -18,6 +19,11 @@ export default function AllPostsC(props) {
                 console.log(error.message)
             })
     }, [props.AddPostStatus])
+
+    const view = (e) => {
+        props.setViewId(e.target.parentElement.id);
+        props.vappStatus(prev=>!prev)
+    }
     return (
         <div>
             {
@@ -26,7 +32,7 @@ export default function AllPostsC(props) {
                         {
                             allClientPosts.map((posts, index) => {
                                 return (
-                                    <div id={posts.jobPostId} key={posts.jobPostId} className='jobPostDiv'>
+                                    <div id={posts.jobId} name={index} className='jobPostDiv'>
                                         <p className='postDate'>{posts.date.slice(8, 10) + '-' + posts.date.slice(5, 7) + '-' + posts.date.slice(0, 4)}</p>
                                         <p className='postHeadP'>Title</p>
                                         <p className='postBodyP'>{posts.jobTitle}</p>
@@ -51,6 +57,7 @@ export default function AllPostsC(props) {
                                                 <p className='postBodyP'>Budget : <span>{posts.budget}</span></p>
                                             </div>
                                         </div>
+                                        <input type='button' value={"Applicants : " + Number(posts.jobProposals.length)} className='applicantButton' onClick={(e) => { view(e) }}></input>
                                     </div>
                                 )
                             })

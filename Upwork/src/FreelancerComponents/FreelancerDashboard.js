@@ -6,9 +6,12 @@ import { useLocation } from 'react-router-dom'
 import AllPostsF from './AllPostsF'
 import AppliedJobs from './AppliedJobs'
 export default function ClientDashboard() {
-    
-    const Location=useLocation();
-    
+
+    const Location = useLocation();
+
+
+    console.log("START : ",Location.state.freelancerEmail)
+        
     const freelancer_dashboard = "http://localhost:8000/upwork/freelancer/dashboard";
     
     const [freelancerDbData, freelancerDbDataSet] = useState({});
@@ -19,10 +22,10 @@ export default function ClientDashboard() {
         console.log("OK");
         axios.post(freelancer_dashboard,
         {
-            email:Location.state.freelancerEmail
+            email: Location.state.freelancerEmail
         })
         .then((response)=>{
-            console.log(response.data)
+            
             freelancerDbDataSet(response.data)
         })
         .catch((error)=>{
@@ -36,11 +39,13 @@ export default function ClientDashboard() {
         getDashBoardData();
     }, [freeTab])
 
-    const freeLancerTabSwitch=()=>{
-        if(freeTab==='All')
-            return (<AllPostsF FreelancerID={freelancerDbData.freelancerId}/>)
-        else if (freeTab === 'Applied')
-            return (<AppliedJobs FreelancerID={freelancerDbData.freelancerId} />)
+    const freeLancerTabSwitch = () => {
+        if (Object.keys(freelancerDbData).length > 0) {
+            if (freeTab === 'All')
+                return (<AllPostsF FreelancerID={freelancerDbData.freelancerId} email={freelancerDbData.email} getDashBoardData={getDashBoardData} />)
+            else if (freeTab === 'Applied')
+                return (<AppliedJobs FreelancerID={freelancerDbData.freelancerId} />)
+        }
     }
 
     return (
