@@ -10,7 +10,7 @@ export default function StudentLogin() {
   const [studentData, setStudentdat] = useState({})
 
   const getSpecificStudent = () => {
-    axios.post('http://localhost:8000/Admin/ViewStudent', { semail: "S" })
+    axios.post('http://localhost:8000/Admin/ViewStudent', { semail: Location.state.email })
       .then((response) => {
         console.log("MAIN DATA", response.data);
         setStudentdat(response.data)
@@ -24,6 +24,26 @@ export default function StudentLogin() {
   }, [])
 
   const [studentImage, setStudentImg] = useState('../IMAGES/Student.png');
+
+  const updateImage = () => {
+    if (studentImage !== '../IMAGES/Student.png') {
+      axios.post('http://localhost:8000/Admin/ViewStudent',
+        {
+          email: Location.state.email,
+          image:studentImage
+        })
+        .then((response) => {
+        console.log(response.data)
+        })
+        .catch((error) => {
+        console.log(error.message)
+      })
+    }
+  }
+
+  useEffect(() => {
+    updateImage();
+  },[studentImage])
 
   const imageConvert = (e) => {
     const base64Img = new FileReader();

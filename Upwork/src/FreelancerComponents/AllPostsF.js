@@ -10,10 +10,10 @@ export default function AllPostsF(props) {
     const my_feed_api = " http://localhost:8000/upwork/freelancer/get-freelancer-feed";
 
     const getAllPosts = () => {
-            console.log("MAIL MAIL :")
-            axios.post(my_feed_api, { email: props.email })
-                .then((response) => {
-                    console.log("DEFAULT POSTS : ", response.data)
+        console.log("MAIL MAIL :")
+        axios.post(my_feed_api, { email: props.email })
+            .then((response) => {
+                console.log("DEFAULT POSTS : ", response.data)
                     props.getDashBoardData();
                     setAllPost(response.data)
                 })

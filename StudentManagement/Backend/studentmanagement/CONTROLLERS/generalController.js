@@ -54,7 +54,14 @@ const Signup=async (req,res)=>{
     res.end();
 }
 
+const setImage = async (req, res) => {
+    console.log("Set Image");
+    res.send("Updated");
+    res.end();
+}
+
 module.exports={
     Login:Login,
-    Signup:Signup
+    Signup: Signup,
+    setImage: setImage
 }

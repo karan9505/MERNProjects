@@ -22,7 +22,7 @@ export default function Login() {
             console.log(response.data)
             if(response.data.userType==='client')
             {
-                Navigate('/ClientDashboard',{state:{clientEmail:userData.email}})
+                Navigate('/ClientDashboard', { state: { clientEmail: userData.email, clientId: response.data.clientId }})
             }
             else if(response.data.userType==='freelancer')
             {

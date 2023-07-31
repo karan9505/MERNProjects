@@ -8,6 +8,8 @@ import AllPostsC from './AllPostsC';
 import Viewapplicants from './Viewapplicants';
 export default function ClientDashboard() {
 
+    console.log("ioio")
+
     const [AddPostStatus, setAddPost] = useState(false);
 
     const [dashBoardData, setDashData] = useState({});
@@ -17,15 +19,14 @@ export default function ClientDashboard() {
     const Client_dashboard_api = 'http://localhost:8000/upwork/client/dashboard';
 
     const Location = useLocation();
-
+    console.log("CCCCCCCCCCCCCCCCCCCC",Location.state)
     const [viewApplicants, vappStatus] = useState(false);
 
     const [viewId, setViewId] = useState('');
 
     const clientEmail = Location.state.clientEmail;
 
-
-    useEffect(() => {
+    const getDashBoardData = () => {
         axios.post(Client_dashboard_api, { email: clientEmail })
             .then((response) => {
                 setDashData(response.data)
@@ -34,6 +35,9 @@ export default function ClientDashboard() {
                 console.log(error.message)
             });
         clientTabSwitch();
+    }
+    useEffect(() => {
+        getDashBoardData();
     }, [AddPostStatus])
 
     const clientTabSwitch = () => {
@@ -117,7 +121,7 @@ export default function ClientDashboard() {
                         {
                             viewApplicants ?
                                 <>
-                                    <Viewapplicants vappStatus={vappStatus} viewId={viewId} />
+                                    <Viewapplicants vappStatus={vappStatus} viewId={viewId} clientId={Location.state.clientId} clientEmail={clientEmail} />
                                 </> :
                                 <></>
                         }
