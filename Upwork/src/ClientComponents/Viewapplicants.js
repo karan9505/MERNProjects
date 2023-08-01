@@ -35,14 +35,15 @@ export default function Viewapplicants(props) {
     setProject({ ...projectData,jobproposalid: e.target.parentElement.id,freelancerid:e.target.id })
   }
 
-  const printDate = (e) => {
+  const sendProject = (e) => {
     console.log(projectData)
     axios.post("http://localhost:8000/upwork/client/start-project", projectData)
       .then((response) => {
         console.log(response.data)
         if (response.data.message === 'success') {
+          console.log("pppp")
           props.vappStatus(prev => !prev)
-          props.clientTabSwitch();
+          props.setReloader(prev=>!prev)
           Navigate('/ClientDashboard', { state: { clientEmail: props.clientEmail, clientId: props.clientId } })
         }
           
@@ -64,6 +65,7 @@ export default function Viewapplicants(props) {
   const createMilestones = (e) => {
     document.getElementById('spsdmc').style.display = "none";
     document.getElementById('milestoneresetbutt').style.display = "block";
+    document.getElementById('sendProjectButton').style.display = "block";
 
     setMilestoneArray([]);
     if (mileC < 11) {
@@ -76,12 +78,16 @@ export default function Viewapplicants(props) {
   const ressetMilestone = () => {
     document.getElementById('spsdmc').style.display = "block";
     document.getElementById('milestoneresetbutt').style.display = "none";
+    document.getElementById('sendProjectButton').style.display = "none";
+
     setMilestoneArray([]);
   }
 
   const setMilestoneData = (e) => {
-    if (e.target.id === "milestoneText")
-      setMilestoneArray(prev => prev, milestonesArray[e.target.parentElement.id].title = e.target.value)
+    if (e.target.id === "milestoneText") {
+      if(e.target.value.length<51)
+        setMilestoneArray(prev => prev, milestonesArray[e.target.parentElement.id].title = e.target.value)
+    }
     else if (e.target.id === "milestoneDes")
       setMilestoneArray(prev => prev, milestonesArray[e.target.parentElement.id].description = e.target.value)
     else if (e.target.id === "milestoneSD")
@@ -126,23 +132,18 @@ export default function Viewapplicants(props) {
                   {
                     
                     milestonesArray.map((data, index) => {
-                      { console.log("MILESTONE : ", data)}
                       return (<div className='milestoneDiv' id={index}>
-                        <p>Milestone : {index + 1}</p>
-                        <p>Title</p>
-                        <input type='text' placeholder='Title...Max(50 Characters' onChange={(e) => { setMilestoneData(e) }} id="milestoneText" value={data.title}></input>
-                        <p>Description</p>
-                        <textarea placeholder='Description...' id="milestoneDes" onChange={(e) => { setMilestoneData(e) }} value={data.description}></textarea>
-                        <p >Start date</p>
-                        <input id="milestoneSD" type='date' onChange={(e) => { setMilestoneData(e) }} value={data.mstartdate}></input>
-                        <p>End date</p>
-                        <input type='date' id="milestoneED" onChange={(e) => { setMilestoneData(e) }} value={data.menddate}></input> 
+                        <p className='milestoneheading'>Milestone : {index + 1}</p>
+                        <p className='milestonetitle'>Title</p>
+                        <input type='text' placeholder='Title...Max(50) Characters' onChange={(e) => { setMilestoneData(e) }} id="milestoneText" value={data.title} className='milestonetitleval'></input>
+                        <p className='milestonedes'>Description</p>
+                        <textarea placeholder='Description...' id="milestoneDes" onChange={(e) => { setMilestoneData(e) }} value={data.description} className='milestonedesval'></textarea> 
                       </div>)
                     })
                     
                   }
-                  <input type="button" onClick={(e) => {printDate(e)}}></input>
                 </div>
+                <input type="button" onClick={(e) => { sendProject(e) }} id="sendProjectButton" value={"START PROJECT"}></input>
               </div>
 
             </div>

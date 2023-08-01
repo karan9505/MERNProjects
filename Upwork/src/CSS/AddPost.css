@@ -40,7 +40,7 @@
     width: 10%;
     border-radius: 20px;
     font-size: 15px;
-    top: 645px;
+    top: 605px;
 }
 
 #PostJobButton:hover {
@@ -73,7 +73,7 @@
 }
 
 #jobDescriptiondiv {
-    top: 180px;
+    top: 170px;
 }
 
 #jobDescriptiondiv>textarea {
@@ -103,12 +103,12 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 #jobSkillsdiv {
-    top: 460px;
+    top: 445px;
     width: 30%;
 }
 
 #jobCategorydiv {
-    top: 550px;
+    top: 530px;
     width: 30%;
 }
 
@@ -122,7 +122,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 #jobTermdiv {
-    top: 550px;
+    top: 530px;
     left: 510px;
     width: 16%;
     height: 57px;
@@ -139,7 +139,7 @@ textarea::-webkit-scrollbar-thumb {
 #jobBudgetdiv {
     position: absolute;
     width: 30%;
-    top: 550px;
+    top: 530px;
     left: 780px;
 }
 

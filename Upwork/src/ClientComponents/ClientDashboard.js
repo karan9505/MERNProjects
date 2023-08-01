@@ -6,26 +6,27 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import AllPostsC from './AllPostsC';
 import Viewapplicants from './Viewapplicants';
+import Ongoing from './Ongoing';
 export default function ClientDashboard() {
 
-    console.log("ioio")
+    const [reloader,setReloader]=useState(false)
 
     const [AddPostStatus, setAddPost] = useState(false);
 
     const [dashBoardData, setDashData] = useState({});
 
-    const [clientTab, setClientTab] = useState('AllPostCs');
+    const [clientTab, setClientTab] = useState('AllPosts');
 
     const Client_dashboard_api = 'http://localhost:8000/upwork/client/dashboard';
 
     const Location = useLocation();
-    console.log("CCCCCCCCCCCCCCCCCCCC",Location.state)
     const [viewApplicants, vappStatus] = useState(false);
 
     const [viewId, setViewId] = useState('');
 
+    
     const clientEmail = Location.state.clientEmail;
-
+    console.log(clientEmail)
     const getDashBoardData = () => {
         axios.post(Client_dashboard_api, { email: clientEmail })
             .then((response) => {
@@ -38,11 +39,15 @@ export default function ClientDashboard() {
     }
     useEffect(() => {
         getDashBoardData();
-    }, [AddPostStatus])
+    }, [AddPostStatus, reloader])
 
     const clientTabSwitch = () => {
-        if (clientTab === 'AllPostCs') {
-            return (<AllPostsC clientEmail={clientEmail} AddPostStatus={AddPostStatus} vappStatus={vappStatus} setViewId={setViewId } />)
+        if (clientTab === 'AllPosts') {
+            return (<AllPostsC clientEmail={clientEmail} AddPostStatus={AddPostStatus} vappStatus={vappStatus} setViewId={setViewId} reloader={reloader} />)
+        }
+        else if (clientTab === 'Ongoing')
+        {
+            return (<Ongoing clientEmail={clientEmail} />)
         }
     }
 
@@ -83,13 +88,13 @@ export default function ClientDashboard() {
                             <AddPost Function={setAddPost} ClientId={dashBoardData.clientId} clientEmail={Location.state.clientEmail} /> : <></>}
                         <div id="ClientBoard">
                             <div id="ClientAlalytics">
-                                <div id="MyPost" className='CDAData'>
+                                <div id="MyPost" className='CDAData' onClick={(e) => { setClientTab('AllPosts') }}>
                                     <h1>
                                         <CountUp start={0} end={dashBoardData.jobPostCount} duration={2}></CountUp>+
                                     </h1>
                                     <p>Posts</p>
                                 </div>
-                                <div id="OnGoingPro" className='CDAData'>
+                                <div id="OnGoingPro" className='CDAData' onClick={(e) => { setClientTab ('Ongoing')}}>
                                     <h1>
                                         <CountUp start={0} end={dashBoardData.incompleteProjectCount} duration={2}></CountUp>+
                                     </h1>
@@ -116,12 +121,15 @@ export default function ClientDashboard() {
                                     {clientTabSwitch()}
                                 </div>
                             </div>
-                            <div id="ClientProfile"></div>
+                            <div id="ClientProfile">
+                                <h1>Client</h1>
+                                <h1>Dashboard</h1>
+                            </div>
                         </div>
                         {
                             viewApplicants ?
                                 <>
-                                    <Viewapplicants vappStatus={vappStatus} viewId={viewId} clientId={Location.state.clientId} clientEmail={clientEmail} />
+                                    <Viewapplicants vappStatus={vappStatus} viewId={viewId} clientId={Location.state.clientId} clientEmail={clientEmail} setReloader={setReloader} />
                                 </> :
                                 <></>
                         }

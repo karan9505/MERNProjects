@@ -96,7 +96,7 @@
 #ClientBoard {
     position: absolute;
     width: 100%;
-    height: 670px;
+    height: 638px;
     background-color: rgb(232, 247, 232);
     top: 69px;
     left: 0px;
@@ -112,6 +112,11 @@
     top: 4%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(16, 138, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgba(0, 108, 0, 1);
 }
 
 #ClientProfile {
@@ -380,7 +385,7 @@
     width: 100%;
     overflow-y: scroll;
     height: 90%;
-    bottom: 0%;
+    bottom: 4%;
 }
 
 .milestoneDiv {
@@ -391,6 +396,7 @@
     margin-top: 30px;
     left: 5%;
     border-radius: 20px;
+    color: rgba(0, 108, 0, 1);
 }
 
 #spsdmc {
@@ -411,7 +417,7 @@
     margin-left: 10px;
 }
 
-#milestoneresetbutt {
+#milestoneresetbutt,#sendProjectButton {
     position: absolute;
     height: 30px;
     width: 100px;
@@ -423,4 +429,51 @@
     border-radius: 20px;
     display: none;
     /* display: none; */
+}
+#sendProjectButton
+{
+    top: 435px;
+    text-align: center;
+    width: 140px;
+}
+.milestonetitle {
+    position: absolute;
+    left: 34px;
+    top:30px;
+}
+
+.milestonetitleval {
+    padding: 5px;
+    outline: none;
+    border: 1px solid rgba(0, 108, 0, 1);
+    position: absolute;
+    width: 90%;
+    left: 4%;
+    top: 80px;
+}
+
+.milestonedes {
+    position: absolute;
+    left: 34px;
+    top:110px;
+}
+.milestonedesval{
+    padding: 5px;
+    outline: none;
+    border: 1px solid rgba(0, 108, 0, 1);
+    position: absolute;
+    width: 90%;
+    left: 4%;
+    top: 80px;
+    resize: none;
+    top:160px;
+    height: 100px;
+}
+.milestoneheading
+{
+    font-size: 20px;
+    position: absolute;
+    width: 14%;
+    text-align: center;
+    left: 43%;
 }

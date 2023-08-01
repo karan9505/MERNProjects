@@ -18,7 +18,7 @@ export default function AllPostsC(props) {
             .catch((error) => {
                 console.log(error.message)
             })
-    }, [props.AddPostStatus])
+    }, [props.AddPostStatus,props.reloader])
 
     const view = (e) => {
         props.setViewId(e.target.parentElement.id);

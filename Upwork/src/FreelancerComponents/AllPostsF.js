@@ -24,7 +24,7 @@ export default function AllPostsF(props) {
 
     useEffect(() => {
         getAllPosts();
-    }, [])
+    }, [props.reloader])
 
     const getHiered = (e) =>
     {

@@ -115,7 +115,10 @@ export default function ClientDashboard() {
                         {freeLancerTabSwitch()}
                     </div>
                 </div>
-                <div id="FLProfile"></div>
+                <div id="FLProfile">
+                        <h1>Freelancer</h1>
+                        <h1>Dashboard</h1>
+                </div>
             </div>
         </>
     )
