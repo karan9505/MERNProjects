@@ -122,8 +122,8 @@ export default function ClientDashboard() {
                                 </div>
                             </div>
                             <div id="ClientProfile">
-                                <h1>Client</h1>
-                                <h1>Dashboard</h1>
+                                <h1>Client<br></br>Dashboard</h1>
+                                <img src="../IMAGES/ClientDashImg.png" alt='Not' className='dashIconImg'></img> 
                             </div>
                         </div>
                         {

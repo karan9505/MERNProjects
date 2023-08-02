@@ -1,0 +1,68 @@
+.ongoingsubdiv,
+.ongoingsubdivdates {
+ display: flex;
+ align-items: center;
+}
+
+.ongoingsubdivdates {
+ justify-content: space-between;
+}
+
+.ongoingsubdivdates>div {
+ display: flex;
+ color: rgb(0, 100, 0);
+ align-items: center;
+}
+
+#milestonemainback {
+ height: 475px;
+ width: 99%;
+}
+
+.milestonedes1 {
+ position: absolute;
+ left: 30px;
+ top: 70px;
+}
+
+.milestonedestext {
+ position: absolute;
+ border: none;
+ outline: none;
+ background-color: transparent;
+ left: 30px;
+ top: 120px;
+ width: 90%;
+ height: 130px;
+ resize: none;
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ font-size: 17px;
+ color: rgb(0, 100, 0);
+}
+
+.milestonedestext::-webkit-scrollbar-track {
+ width: 0px;
+}
+
+.milestoneheading1 {
+ position: absolute;
+ width: 20%;
+ text-align: center;
+ left: 40%;
+}
+.verifypending{
+ outline: none;
+ border: none;
+ position: absolute;
+ bottom: 10px;
+ padding: 3px 7px 3px 7px;
+ background-color: rgb(0, 140, 0);
+ color: white;
+ width: 14%;
+ border-radius: 20px;
+ left: 43%;
+}
+.milestoneDiv
+{
+ height: 400px;
+}

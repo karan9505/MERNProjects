@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useLocation } from 'react-router-dom'
 import AllPostsF from './AllPostsF'
 import AppliedJobs from './AppliedJobs'
+import OngoingFreelancer from './OngoingFreelancer'
 export default function ClientDashboard() {
 
     const Location = useLocation();
@@ -45,6 +46,8 @@ export default function ClientDashboard() {
                 return (<AllPostsF FreelancerID={freelancerDbData.freelancerId} email={freelancerDbData.email} getDashBoardData={getDashBoardData} />)
             else if (freeTab === 'Applied')
                 return (<AppliedJobs FreelancerID={freelancerDbData.freelancerId} />)
+            else if (freeTab === 'Ongoing')
+                return (<OngoingFreelancer email={freelancerDbData.email} />)
         }
     }
 
@@ -92,6 +95,13 @@ export default function ClientDashboard() {
                         </h1>
                         <p>Applied</p>
                     </div>
+                    <div id="" className='CDAData' onClick={(e) => { setFreeTab("Ongoing") }}>
+                        <h1>
+                            <CountUp start={0} end={freelancerDbData.incompleteProjectCount
+                            } duration={2}></CountUp>+
+                        </h1>
+                        <p>Ongoing projects</p>
+                    </div>
                     <div id="" className='CDAData'>
                         <h1>
                             <CountUp start={0} end={freelancerDbData.completeProjectCount
@@ -99,13 +109,7 @@ export default function ClientDashboard() {
                         </h1>
                         <p>Completed projects</p>
                     </div>
-                    <div id="" className='CDAData'>
-                        <h1>
-                            <CountUp start={0} end={freelancerDbData.incompleteProjectCount
-} duration={2}></CountUp>+
-                        </h1>
-                        <p>Ongoing projects</p>
-                    </div>
+                    
                 </div>
                 <div id="FLPost">
                     <div className='FLSearchDiv'>
