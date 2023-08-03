@@ -63,7 +63,7 @@ export default function AllPostsC(props) {
                             })
                         }
                     </> :
-                    <><h1>All Post Empty</h1></>
+                    <><h1>All Post Empty Main</h1></>
             }
         </div>
     )

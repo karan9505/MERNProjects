@@ -6,10 +6,13 @@ import { useLocation } from 'react-router-dom'
 import AllPostsF from './AllPostsF'
 import AppliedJobs from './AppliedJobs'
 import OngoingFreelancer from './OngoingFreelancer'
+import CompletedFreelancer from './CompletedFreelancer'
+import AccountsFreelancer from './AccountsFreelancer'
 export default function ClientDashboard() {
 
     const Location = useLocation();
 
+    const [viewSatus, setView] = useState(false);
 
     console.log("START : ",Location.state.freelancerEmail)
         
@@ -48,11 +51,20 @@ export default function ClientDashboard() {
                 return (<AppliedJobs FreelancerID={freelancerDbData.freelancerId} />)
             else if (freeTab === 'Ongoing')
                 return (<OngoingFreelancer email={freelancerDbData.email} />)
+            else if (freeTab === 'Completed')
+                return (<CompletedFreelancer email={freelancerDbData.email} />)
         }
     }
 
     return (
         <>
+            {
+                viewSatus ?
+                    <>
+                        <AccountsFreelancer email={freelancerDbData.email} />
+                    </> :
+                    <></>
+            }
             <div id="CDNavbar">
                 <img src='../IMAGES/UwFullLogo.png' alt="Not Found" id="UwImgLogo"></img>
                 <div id="CDNavbar1">
@@ -85,11 +97,11 @@ export default function ClientDashboard() {
                     <div id="" className='FLAData' onClick={(e) => { setFreeTab("All") }}>
                         <h1>
                             <CountUp start={0} end={freelancerDbData.allPostCount
-} duration={2}></CountUp>+
+                            } duration={2}></CountUp>+
                         </h1>
                         <p>Posts</p>
                     </div>
-                    <div id="" className='CDAData' onClick={(e)=>{setFreeTab("Applied")}}>
+                    <div id="" className='CDAData' onClick={(e) => { setFreeTab("Applied") }}>
                         <h1>
                             <CountUp start={0} end={freelancerDbData.jobProposalCount} duration={2}></CountUp>+
                         </h1>
@@ -102,14 +114,15 @@ export default function ClientDashboard() {
                         </h1>
                         <p>Ongoing projects</p>
                     </div>
-                    <div id="" className='CDAData'>
+                    <div id="" className='CDAData' onClick={(e) => { setFreeTab("Completed") }}>
                         <h1>
                             <CountUp start={0} end={freelancerDbData.completeProjectCount
-} duration={2}></CountUp>+
+                            } duration={2}></CountUp>+
                         </h1>
                         <p>Completed projects</p>
                     </div>
-                    
+
+
                 </div>
                 <div id="FLPost">
                     <div className='FLSearchDiv'>
@@ -120,10 +133,15 @@ export default function ClientDashboard() {
                     </div>
                 </div>
                 <div id="FLProfile">
-                        <h1>Freelancer</h1>
-                        <h1>Dashboard</h1>
+                    <h1>Freelancer</h1>
+                    <h1>Dashboard</h1>
+                    <div id="" className='CDAData' onClick={(e) => { setView(prev=>!prev) }}>
+                        <h1>
+                            Account<br></br>Billing
+                        </h1>
+                    </div>
                 </div>
             </div>
-        </>
+            </>
     )
 }

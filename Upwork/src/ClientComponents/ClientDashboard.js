@@ -47,7 +47,7 @@ export default function ClientDashboard() {
         }
         else if (clientTab === 'Ongoing')
         {
-            return (<Ongoing clientEmail={clientEmail} />)
+            return (<Ongoing clientEmail={clientEmail} reloader={setReloader} setClientTab={setClientTab} />)
         }
     }
 

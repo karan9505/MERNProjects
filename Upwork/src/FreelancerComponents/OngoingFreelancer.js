@@ -6,38 +6,42 @@ export default function OngoingFreelancer(props) {
 
   const [selectedPost, setSP] = useState();
 
-const [mileStone, mileStatus] = useState(false)
+  const [mileStone, mileStatus] = useState(false)
 
- const [ongoingFreeArray, setOngoingFree] = useState([]);
+  const [ongoingFreeArray, setOngoingFree] = useState([]);
 
- const getAppliedPosts = () => {
-  axios.post("http://localhost:8000/upwork/freelancer/get-projects-info",
-   {
-    email: props.email,
-    status:"incomplete"
-   })
-   .then((response) => {
-    console.log("FREELANCE RESPONSE : ", response.data)
-    setOngoingFree(response.data)
-   })
-   .catch((error) => {
-   console.log(error.message)
-  })
- }
- useEffect(() => {
-  getAppliedPosts();
- }, [])
- 
- const getDaysLeft = (startDate, endDate) => {
-  let s = new Date(startDate);
-  let e = new Date(endDate);
-  let daysLeft = (s.getTime() - e.getTime()) / (1000 * 60 * 60 * 24);
-  return (<p className='postBodyP'>{" : " + daysLeft}</p>)
+  const getAppliedPosts = () => {
+    axios.post("http://localhost:8000/upwork/freelancer/get-projects-info",
+      {
+        email: props.email,
+        status: "incomplete"
+      })
+      .then((response) => {
+        console.log("FREELANCE RESPONSE : ", response.data)
+        setOngoingFree(response.data)
+      })
+      .catch((error) => {
+        console.log(error.message)
+      })
   }
-  
+  useEffect(() => {
+    getAppliedPosts();
+  }, [])
+
+  const getDaysLeft = (startDate, endDate) => {
+    let s = new Date(startDate);
+    let e = new Date(endDate);
+    let daysLeft = (s.getTime() - e.getTime()) / (1000 * 60 * 60 * 24);
+    return (<p className='postBodyP'>{" : " + daysLeft}</p>)
+  }
+
   const showMileStone = (e) => {
-    setSP(e.target.parentElement.id)
-    mileStatus(prev=>!prev)
+    for (let i = 0; i < ongoingFreeArray.length; i++) {
+      if (ongoingFreeArray[i].jobPostId === Number(e.target.parentElement.id)) {
+        setSP(ongoingFreeArray[i])
+      }
+    }
+    mileStatus(prev => !prev)
   }
 
   return (
@@ -79,7 +83,7 @@ const [mileStone, mileStatus] = useState(false)
                           </div>
                         </div>
 
-                        <input type='button' value={"Milestones : " + Number(posts.millstones.length)} className='applicantButton' onClick={(e) => { showMileStone (e)}}></input>
+                        <input type='button' value={"Milestones : " + Number(posts.millstones.length)} className='applicantButton' onClick={(e) => { showMileStone(e) }}></input>
                       </div>
                     )
                   })
@@ -88,8 +92,8 @@ const [mileStone, mileStatus] = useState(false)
               <><h1>Ongoing Post Empty</h1></>
           }
         </>
-        
-    }
+
+      }
     </div>
   )
 }

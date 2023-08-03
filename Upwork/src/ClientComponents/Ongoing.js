@@ -22,7 +22,7 @@ export default function Ongoing(props) {
         status: "incomplete"
       })
       .then((response) => {
-        console.log(response.data)
+        console.log("ALL ON GOING : ",response.data)
         setOngoingPost(response.data)
       })
       .catch((error) => {
@@ -68,7 +68,7 @@ export default function Ongoing(props) {
             {
               mileStone ?
                 <>
-                  <MilestonesView mileStatus={mileStatus} mileStoneArray={mileStoneArray} mileSubData={mileSubData} onGoingMileStone={onGoingMileStone} />
+                  <MilestonesView mileStatus={mileStatus} mileStoneArray={mileStoneArray} mileSubData={mileSubData} onGoingMileStone={onGoingMileStone} clientEmail={props.clientEmail} reloader={props.reloader} mileStatus={mileStatus} setClientTab={props.setClientTab} />
                 </> :
                 <>
                   {
