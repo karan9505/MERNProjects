@@ -194,7 +194,7 @@ export default function ClientDashboard() {
             {
                 viewApplicants ?
                     <>
-                        <Viewapplicants vappStatus={vappStatus} viewId={viewId} clientId={Location.state.clientId} clientEmail={clientEmail} setReloader={setReloader} />
+                        <Viewapplicants vappStatus={vappStatus} viewId={viewId} clientId={Location.state.clientId} clientEmail={clientEmail} setReloader={setReloader} setBalanceDown={setBalanceDown} setReqBal={setReqBal} />
                     </> :
                     <></>
             }

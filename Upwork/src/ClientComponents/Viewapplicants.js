@@ -40,8 +40,11 @@ export default function Viewapplicants(props) {
     axios.post("http://localhost:8000/upwork/client/start-project", projectData)
       .then((response) => {
         console.log(response.data)
-        if (response.data.message === 'success') {
-          console.log("pppp")
+        if (response.data.message === "Please Add Balance") {
+          props.setReqBal(response.data.required)
+          props.setBalanceDown(prev=>!prev)
+        }
+        else if (response.data.message === 'success') {
           props.vappStatus(prev => !prev)
           props.setReloader(prev=>!prev)
           Navigate('/ClientDashboard', { state: { clientEmail: props.clientEmail, clientId: props.clientId } })
