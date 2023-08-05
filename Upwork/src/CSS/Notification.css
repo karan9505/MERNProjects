@@ -1,0 +1,66 @@
+.notifivationWindow{
+ position: absolute;
+ height: 90%;
+ top:5%;
+ width: 60%;
+ left: 20%;
+ background-color: white;
+ border-radius: 20px;
+}
+.notificationHead{
+ position: absolute;
+ font-weight: 100;
+ width: 20%;
+ /* background-color: aqua; */
+ left: 40%;
+ text-align: center;
+}
+.notificationWrapper,.notificationWrapper1,.notificationWrapper2{
+ position: relative;
+ height: 40%;
+ width: 90%;
+ left:5%;
+ top: 11%;
+}
+.notificationScroll{
+ position: absolute;
+ height: 88%;
+ width: 100%;
+ top:12%;
+ overflow-y: auto;
+}
+
+.notificationWrapper2{
+ height: 81%;
+}
+.notificationElement,.notificationElementL{
+ display: flex;
+ justify-content: space-between;
+ margin-bottom: 10px;
+ height: 40px;
+ align-items: center;
+ font-size: 13px;
+ 
+}
+.notificationElement>div,.notificationElementL>div{
+ display: flex;
+ margin-right: 20px;
+}
+.notificationElement>p,.notificationElementL>p{
+ margin-left: 10px;
+ 
+}
+.notificationElement {
+ background-color: rgba(13, 138, 0, 0.4);
+ border-radius: 5px;
+ color:rgba(0, 0, 0, 0.7)
+}
+.notificationElementL{
+ background-color: rgba(13, 138, 0, 0.7);
+ border-radius: 5px;
+ color: rgba(255, 255, 255, 0.9);
+}
+.notiHead{
+ border-bottom: 1px solid rgba(13, 138, 0, 0.4);
+ color: rgba(13, 138, 0, 1);
+}

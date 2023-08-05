@@ -21,13 +21,6 @@ export default function CompletedFreelancer(props) {
    })
  }
 
- const getDaysLeft = (startDate, endDate) => {
-  let s = new Date(startDate);
-  let e = new Date(endDate);
-  let daysLeft = (s.getTime() - e.getTime()) / (1000 * 60 * 60 * 24);
-  return (<p className='postBodyP'>{" : " + daysLeft}</p>)
- }
-
  useEffect(()=> {
   getAllCompletedPosts();
  },[])

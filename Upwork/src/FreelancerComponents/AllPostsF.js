@@ -35,8 +35,13 @@ export default function AllPostsF(props) {
                 jobpostid: e.target.parentElement.id
             })
             .then((response) => {
-                console.log(response.data)
-                getAllPosts();
+                console.log("C R : ",response.data)
+                if (response.data.message === "Please Add Balance") {
+                    props.setReqBal(response.data.required)
+                    props.setBalanceDown(prev => !prev)
+                }
+                else    
+                    getAllPosts();
             })
             .catch((error) => {
                 console.log(error.message)

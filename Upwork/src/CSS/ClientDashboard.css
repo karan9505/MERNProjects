@@ -158,11 +158,13 @@
     box-shadow: 0px 0px 5px rgba(16, 138, 0, 3);
     border: 2px solid beige;
 }
+
 .CDAData>h1 {
     position: absolute;
     left: 50px;
     font-size: 36px;
     margin-top: 20px;
+    font-weight: lighter;
 }
 
 .CDAData>p {
@@ -170,6 +172,7 @@
     left: 50px;
     margin-top: 60px;
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .ClientSearchDiv {
@@ -282,7 +285,21 @@
     top: 10px;
     height: 25px;
 }
+.notificationDashImg,.editProfImg,.chatDashImg{
+    height: 40px;
+}
 
+.dashDataImgDiv{
+    position: absolute;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    top:205px;
+}
+.editProfImg{
+    height: 30px;
+}
 #closeview:hover {
     cursor: pointer;
 }
@@ -417,7 +434,8 @@
     margin-left: 10px;
 }
 
-#milestoneresetbutt,#sendProjectButton {
+#milestoneresetbutt,
+#sendProjectButton {
     position: absolute;
     height: 30px;
     width: 100px;
@@ -430,16 +448,17 @@
     display: none;
     /* display: none; */
 }
-#sendProjectButton
-{
+
+#sendProjectButton {
     top: 435px;
     text-align: center;
     width: 140px;
 }
+
 .milestonetitle {
     position: absolute;
     left: 31px;
-    top:30px;
+    top: 30px;
 }
 
 .milestonetitleval {
@@ -455,9 +474,10 @@
 .milestonedes {
     position: absolute;
     left: 34px;
-    top:110px;
+    top: 110px;
 }
-.milestonedesval{
+
+.milestonedesval {
     padding: 5px;
     outline: none;
     border: 1px solid rgba(0, 108, 0, 1);
@@ -466,14 +486,59 @@
     left: 4%;
     top: 80px;
     resize: none;
-    top:160px;
+    top: 160px;
     height: 190px;
 }
-.milestoneheading
-{
+
+.milestoneheading {
     font-size: 20px;
     position: absolute;
     width: 14%;
     text-align: center;
     left: 43%;
+}
+
+.dashHead {
+    font-weight: 100;
+    position: absolute;
+    top: 10px;
+    letter-spacing: 15px;
+    text-align: center;
+    line-height: 27px;
+}
+
+.dashHead>span {
+    font-size: 15px;
+    letter-spacing: 10px;
+}
+
+.dashIconImg {
+    position: absolute;
+    top: 100px;
+    border-bottom: 1px dotted rgba(0, 108, 0, 1);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.notificationCount{
+    position: absolute;
+    color: white;
+    background-color: rgba(255, 8, 8, 1);
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    top:0px;
+    left: -5px;
+}
+.notificationCount:hover{
+    cursor: pointer;
+}
+.notificationCount>p{
+    font-size: 13px;
+}
+.dashDataImgDiv>img:hover{
+    cursor: pointer;
 }

@@ -205,3 +205,37 @@
 .skillwrap::-webkit-scrollbar-track {
     background: rgba(0, 108, 0, 0);
 }
+#freelancerAccount{
+    position: absolute;
+    bottom: 20px;
+}
+#freelancerAccount>h1{
+    position: absolute;
+    left: 20px;
+}
+.dashHead1 {
+    font-weight: 100;
+    position: absolute;
+    top: 10px;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 27px;
+    left: 10px;
+    text-align: center;
+}
+
+.dashHead1>span {
+    font-size: 15px;
+    letter-spacing: 21px;
+    text-align: center;
+    position: relative;
+    left: 8px;
+}
+.dashIconImg1 {
+    position: absolute;
+    top: 93px;
+    border-bottom: 1px dotted rgba(0, 108, 0, 1);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 7px;
+}

@@ -31,8 +31,13 @@ export default function MilestonesView(props) {
     axios.post("http://localhost:8000/upwork/client/verify-milestone", mileSubData)
       .then((response) => {
         console.log(response.data)
-        if (response.data.message === "successful")
+        if (response.data.message === "Please Add Balance") {
+          props.setReqBal(response.data.required)
+          props.setBalanceDown(prev=>!prev)
+        } else {
           updateMileStone();
+          props.getNotificationCount();
+        }
       })
       .catch((error) => {
         console.log(error.message)
@@ -64,7 +69,7 @@ export default function MilestonesView(props) {
             <p className='milestoneheading1'>Milestone : {index + 1}</p>
             <p className='milestonetitle'>Title : {data.title}</p>
             <p className='milestonedes1'>Despription :</p>
-            <textarea className='milestonedestext'>{data.description}</textarea>
+            <textarea className='milestonedestext' disabled>{data.description}</textarea >
             <p className='milestonesolution'>Solution :</p>
             <textarea className='milestonesolutiontext' disabled>{data.solution}</textarea>
             {

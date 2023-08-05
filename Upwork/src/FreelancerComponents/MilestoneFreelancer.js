@@ -10,6 +10,7 @@ export default function MilestoneFreelancer(props) {
   const [onGoingMileStone, setOngoingNum] = useState()
 
   const [selectedPost, setSP] = useState(props.selectedPost);
+  console.log("SELECTED POST : ",selectedPost)
 
   // const updateMileStone = () => {
   //   axios.post("http://localhost:8000/upwork/client/get-project-milestones", mileSubData)
@@ -25,7 +26,8 @@ export default function MilestoneFreelancer(props) {
 
   console.log()
   const getMileStone = () => {
-    axios.post("http://localhost:8000/upwork/client/get-project-milestones", { projectid: selectedPost.jobPostId })
+    console.log(selectedPost.projectid)
+    axios.post("http://localhost:8000/upwork/client/get-project-milestones", { projectid: selectedPost.projectId })
       .then((response) => {
         console.log("FREE MILESTONES", response.data)
         setMileArray(response.data.mileStones)

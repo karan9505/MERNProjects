@@ -8,6 +8,8 @@ import AppliedJobs from './AppliedJobs'
 import OngoingFreelancer from './OngoingFreelancer'
 import CompletedFreelancer from './CompletedFreelancer'
 import AccountsFreelancer from './AccountsFreelancer'
+import Lowbalance from '../GeneralComponents/Lowbalance'
+import NotificationWindow from '../GeneralComponents/NotificationWindow'
 export default function ClientDashboard() {
 
     const Location = useLocation();
@@ -20,7 +22,11 @@ export default function ClientDashboard() {
     
     const [freelancerDbData, freelancerDbDataSet] = useState({});
 
-    const [freeTab,setFreeTab]=useState('All');
+    const [freeTab, setFreeTab] = useState('All');
+    
+    const [balanceDown, setBalanceDown] = useState(false);
+
+    const [requiredBalance, setReqBal] = useState('');
 
     const getDashBoardData=()=>{
         console.log("OK");
@@ -29,8 +35,9 @@ export default function ClientDashboard() {
             email: Location.state.freelancerEmail
         })
         .then((response)=>{
-            
+            console.log("freelancer dash",response.data)
             freelancerDbDataSet(response.data)
+            setNotiCount(response.data.notification)
         })
         .catch((error)=>{
             console.log(error.message)
@@ -46,7 +53,7 @@ export default function ClientDashboard() {
     const freeLancerTabSwitch = () => {
         if (Object.keys(freelancerDbData).length > 0) {
             if (freeTab === 'All')
-                return (<AllPostsF FreelancerID={freelancerDbData.freelancerId} email={freelancerDbData.email} getDashBoardData={getDashBoardData} />)
+                return (<AllPostsF FreelancerID={freelancerDbData.freelancerId} email={freelancerDbData.email} getDashBoardData={getDashBoardData} setBalanceDown={setBalanceDown} setReqBal={setReqBal} />)
             else if (freeTab === 'Applied')
                 return (<AppliedJobs FreelancerID={freelancerDbData.freelancerId} />)
             else if (freeTab === 'Ongoing')
@@ -56,12 +63,46 @@ export default function ClientDashboard() {
         }
     }
 
+    const [notificationWindow, setNotWindow] = useState(false)
+
+    const [notificationCount, setNotiCount] = useState(0);
+
+    const getNotificationCount = (e) => {
+        axios.post('http://localhost:8000/upwork/notificationFreelancerCount', { key: freelancerDbData.freelancerId })
+            .then((response) => {
+                console.log("LATEST NOTIFICATION : ", response.data)
+                setNotiCount(response.data)
+            })
+            .catch((error) => {
+                console.log(error.message)
+            })
+    }
+
+    const viewNotification = (e) => {
+        setNotWindow(prev => !prev);
+        setNotiCount(0);
+    }
+
     return (
         <>
             {
                 viewSatus ?
                     <>
-                        <AccountsFreelancer email={freelancerDbData.email} />
+                        <AccountsFreelancer email={freelancerDbData.email} setView={setView} userType={"F"} getNotificationCount={getNotificationCount} />
+                    </> :
+                    <></>
+            }
+            {
+                balanceDown ?
+                    <>
+                        <Lowbalance setBalanceDown={setBalanceDown} requiredBalance={requiredBalance} />
+                    </> :
+                    <></>
+            }
+            {
+                notificationWindow ?
+                    <>
+                        <NotificationWindow setNotWindow={setNotWindow} Id={freelancerDbData.freelancerId} userType={"freelancerid"} />
                     </> :
                     <></>
             }
@@ -133,9 +174,24 @@ export default function ClientDashboard() {
                     </div>
                 </div>
                 <div id="FLProfile">
-                    <h1>Freelancer</h1>
-                    <h1>Dashboard</h1>
-                    <div id="" className='CDAData' onClick={(e) => { setView(prev=>!prev) }}>
+                    <h1 className='dashHead1'>Freelancer<br></br><span>Dashboard</span></h1>
+                    <img src="../IMAGES/FreeDashImg.png" alt='Not' className='dashIconImg1'></img>
+                    <div className='dashDataImgDiv'>
+                        {
+                            (Number(notificationCount)) > 0 ?
+                                <>
+                                    <div className='notificationCount' title="Notifications" onClick={(e) => { viewNotification(e) }}>
+                                        <p>{notificationCount}</p>
+                                    </div>
+                                </> :
+                                <>
+                                </>
+                        }
+                        <img src='../IMAGES/Notification.png' alt="Not" className='notificationDashImg' onClick={(e) => { viewNotification(e) }} title='Notification'></img>
+                        <img src='../IMAGES/Chat.png' alt="Not" className='chatDashImg' title='Chats'></img>
+                        <img src='../IMAGES/Edit.png' alt="Not" className='editProfImg' title='Edit Profile'></img>
+                    </div>
+                    <div id="freelancerAccount" className='CDAData' onClick={(e) => { setView(prev=>!prev) }}>
                         <h1>
                             Account<br></br>Billing
                         </h1>

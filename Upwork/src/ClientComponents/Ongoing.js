@@ -68,7 +68,7 @@ export default function Ongoing(props) {
             {
               mileStone ?
                 <>
-                  <MilestonesView mileStatus={mileStatus} mileStoneArray={mileStoneArray} mileSubData={mileSubData} onGoingMileStone={onGoingMileStone} clientEmail={props.clientEmail} reloader={props.reloader} mileStatus={mileStatus} setClientTab={props.setClientTab} />
+                  <MilestonesView mileStatus={mileStatus} mileStoneArray={mileStoneArray} mileSubData={mileSubData} onGoingMileStone={onGoingMileStone} clientEmail={props.clientEmail} reloader={props.reloader} mileStatus={mileStatus} setClientTab={props.setClientTab} setBalanceDown={props.setBalanceDown} setReqBal={props.setReqBal} getNotificationCount={props.getNotificationCount} />
                 </> :
                 <>
                   {
