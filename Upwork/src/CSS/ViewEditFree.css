@@ -1,0 +1,70 @@
+.viewMainBack{
+ position: absolute;
+ top:0%;
+ left: 0%;
+ height: 100%;
+ width: 100%;
+ background-color: rgba(0,0,0,0.5);
+ z-index: 3;
+}
+.viewWindow{
+ position: absolute;
+ height: 94%;
+ width: 70%;
+ top:3%;
+ left: 15%;
+ background-color: white;
+ border-radius: 20px;
+}
+#profileViewHead{
+ position: absolute;
+ font-weight: 100;
+ width: 20%;
+ text-align: center;
+ left: 40%;
+}
+.viewName{
+ position: absolute;
+ left:5%;
+ top:100px;
+}
+.viewAboutWrap{
+ position: absolute;
+ left:5%;
+ top:130px;
+ width: 90%;
+}
+.viewCECwrap{
+ position: absolute;
+ display: flex;
+ width: 90%;
+ justify-content: space-between;
+ top:300px;
+ left:5%;
+}
+.projectPreffWrap{
+ position: absolute;
+ top:400px;
+ left:5%;
+ display: flex;
+ align-items: center;
+}
+.viewSkillwrap{
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ position: absolute;
+ left:5%;
+ top:500px;
+}
+.viewExperience{
+ position: absolute;
+ top:400px;
+ right: 5%;
+}
+#viewAbtTxt{
+ height: 113px;
+ width: 100%;
+ background-color: transparent;
+ resize: none;
+}

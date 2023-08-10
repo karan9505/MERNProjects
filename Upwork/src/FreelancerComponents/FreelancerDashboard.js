@@ -10,6 +10,7 @@ import CompletedFreelancer from './CompletedFreelancer'
 import AccountsFreelancer from './AccountsFreelancer'
 import Lowbalance from '../GeneralComponents/Lowbalance'
 import NotificationWindow from '../GeneralComponents/NotificationWindow'
+import ViewEditFree from './ViewEditFree'
 export default function ClientDashboard() {
 
     const Location = useLocation();
@@ -83,6 +84,8 @@ export default function ClientDashboard() {
         setNotiCount(0);
     }
 
+    const [viewProfStatus, setViewProf] = useState(false);
+
     return (
         <>
             {
@@ -103,6 +106,13 @@ export default function ClientDashboard() {
                 notificationWindow ?
                     <>
                         <NotificationWindow setNotWindow={setNotWindow} Id={freelancerDbData.freelancerId} userType={"freelancerid"} />
+                    </> :
+                    <></>
+            }
+            {
+                viewProfStatus ?
+                    <>
+                        <ViewEditFree setViewProf={setViewProf} Id={freelancerDbData.freelancerId} />
                     </> :
                     <></>
             }
@@ -189,7 +199,7 @@ export default function ClientDashboard() {
                         }
                         <img src='../IMAGES/Notification.png' alt="Not" className='notificationDashImg' onClick={(e) => { viewNotification(e) }} title='Notification'></img>
                         <img src='../IMAGES/Chat.png' alt="Not" className='chatDashImg' title='Chats'></img>
-                        <img src='../IMAGES/Edit.png' alt="Not" className='editProfImg' title='Edit Profile'></img>
+                        <img src='../IMAGES/View.png' alt="Not" className='editProfImg' title='View Profile' onClick={(e) => { setViewProf (prev=>!prev)}}></img>
                     </div>
                     <div id="freelancerAccount" className='CDAData' onClick={(e) => { setView(prev=>!prev) }}>
                         <h1>

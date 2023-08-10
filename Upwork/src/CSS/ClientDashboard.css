@@ -297,9 +297,7 @@
     justify-content: space-between;
     top:205px;
 }
-.editProfImg{
-    height: 30px;
-}
+
 #closeview:hover {
     cursor: pointer;
 }
